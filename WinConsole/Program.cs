@@ -47,6 +47,55 @@ namespace WinConsole
             string mob3 = "goliath";
             string mob4 = "goblin?"; //little too well spoken for a goblin. and quite a bloody feast it has
             string mob5 = "barghest"; //shapeshift go brr
+        
+            //generic menu for Sprint 1
+            string response;
+
+            Console.WriteLine("Welcome to the Aether, traveler. Want to see what new world I'm crafting?\nPlease, tell me what you'd like to see or know.\n");
+
+            //time for the menu writeline
+
+            Console.WriteLine("1) Rooms\n2) Weapons\n3) Potions\n4) Treasures\n5) Items\n6) Mobs\n7) Leave the Aether\n");
+            
+            Console.Write("Response => ");
+
+            response = Console.ReadLine();
+
+            switch(response)
+            {
+                case "1":
+                    Console.WriteLine("\nOk. The following rooms exist: \nFirst, we have the Sewer Entrance, Sewer Hall, and Sewer Common Room.");
+                    Console.WriteLine("Next we have the Gaol Cell, a Gang Hallway, and a Gang Office.\n");
+                    break;
+
+                case "2":
+                    Console.WriteLine("\nCurrently I have crafted a greatsword, longsword, rapier and dagger.\nI also made a casting focus, for when I eventually craft a magic system for people.\n");
+                    break;
+
+                case "3":
+                    Console.WriteLine("\nPotions that currently exist are minor healing and invisibility.\n");
+                    break;
+
+                case "4":
+                    Console.WriteLine("\nCurrent treasures are scrolls of Magic Missile, a longsword +1, and a scroll whos effects I will leave a mystery!\n");
+                    break;
+
+                case "5":
+                    Console.WriteLine("\nCurrent items needed for various reasons are a cell key, torch, a moldy bone, and an archaic mark of some kind.\n");
+                    break;
+
+                case "6":
+                    Console.WriteLine("\nThe creatures I have crafted thus far are goblins, orcs, goliaths, something that looks like a goblin, and a fiery hound from not the mortal plane!\nI'll leave that last one open to interpretation, traveler.\n");
+                    break;
+
+                case "7":
+                    Console.WriteLine("\nGoodbye! Next time I should have much more for you to see, traveler!");
+                    break;
+            }
+
+            Console.ReadLine();
+
+
         }
     }
 }
