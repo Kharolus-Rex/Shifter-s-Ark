@@ -1,0 +1,5 @@
+﻿greatsword
+longsword
+rapier
+casting focus
+dagger
