@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LibRooms;
 
 namespace WinConsole
 {
@@ -75,8 +76,9 @@ namespace WinConsole
                 switch (response)
                 {
                     case "1":
-                        Console.WriteLine("\nOk. The following rooms exist: \nFirst, we have the Sewer Entrance, Sewer Hall, and Sewer Common Room.");
-                        Console.WriteLine("Next we have the Gaol Cell, a Gang Hallway, and a Gang Office.\n");
+                        //Console.WriteLine("\nOk. The following rooms exist: \nFirst, we have the Sewer Entrance, Sewer Hall, and Sewer Common Room.");
+                        //Console.WriteLine("Next we have the Gaol Cell, a Gang Hallway, and a Gang Office.\n");
+                        LibRooms.RoomsList();
                         break;
 
                     case "2":

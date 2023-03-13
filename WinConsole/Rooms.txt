@@ -1,5 +1,5 @@
 ﻿Sewer Entrance
-Sewer Hall T
+Sewer Hall
 Sewer Gang Base
 Gaol Cell
 Gang Hallway
