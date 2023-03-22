@@ -13,6 +13,7 @@ namespace WinConsole
         {
             //init weapons
             string weapon1, weapon2, weapon3, weapon4, weapon5;
+            string weapon1Desc, weapon2Desc, weapon3Desc, weapon4Desc, weapon5Desc;
 
             StreamReader inputFile;
 
@@ -20,14 +21,19 @@ namespace WinConsole
 
             //define
             weapon1 = inputFile.ReadLine();
+            weapon1Desc = inputFile.ReadLine();
             weapon2 = inputFile.ReadLine();
+            weapon2Desc = inputFile.ReadLine();
             weapon3 = inputFile.ReadLine();
+            weapon3Desc = inputFile.ReadLine();
             weapon4 = inputFile.ReadLine();
+            weapon4Desc = inputFile.ReadLine();
             weapon5 = inputFile.ReadLine();
+            weapon5Desc = inputFile.ReadLine();
 
             inputFile.Close();
 
-            Console.WriteLine("\nCurrent weapons available are a " + weapon1 + ", " + weapon2 + ", " + weapon3 + ", " + weapon4 + " and a " + weapon5 + ".\n");
+            Console.WriteLine("\nCurrent weapons available are:\n" + weapon1 + ": " + weapon1Desc + "\n" + weapon2 + ": " + weapon2Desc + "\n" + weapon3 + ": " + weapon3Desc + "\n" + weapon4 + ": " + weapon4Desc + "\n" + weapon5 + ": " + weapon5Desc + "\n");
         }
     }
 }

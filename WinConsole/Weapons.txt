@@ -1,5 +1,10 @@
 ﻿greatsword
+One big sword.
 longsword
+Long sword, but not long reach.
 rapier
+Pointy!
 casting focus
+None of you can use this right now.
 dagger
+Small, throwable, weak. Like a goblin.
