@@ -10,6 +10,8 @@ namespace WinConsole
     {
         public static void simpleCombat()
         {
+            int playerHP = 100;
+            int mobHP = 100;
 
         }
     }

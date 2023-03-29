@@ -1,10 +1,15 @@
 ﻿greatsword
 One big sword.
+2d6
 longsword
 Long sword, but not long reach.
+1d10
 rapier
 Pointy!
-casting focus
-None of you can use this right now.
+1d8
+club
+Bonk!
+1d4
 dagger
 Small, throwable, weak. Like a goblin.
+1d4
