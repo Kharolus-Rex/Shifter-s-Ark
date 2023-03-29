@@ -20,7 +20,7 @@ namespace WinConsole
 
             response = Console.ReadLine();
 
-            while (response != "7")
+            while (response != "8")
             {
                 switch (response)
                 {
@@ -49,7 +49,7 @@ namespace WinConsole
                         break;
 
                     case "7":
-                        SimpleCombat.simpleCombat();
+                        SimpleCombat.CombatTest();
                         break;
                 }
                 Console.WriteLine("Is there anything else you'd like to see, Traveler?\n");

@@ -8,7 +8,7 @@ namespace WinConsole
 {
     class SimpleCombat
     {
-        public static void simpleCombat()
+        public static void CombatTest()
         {
             //init rand
             Random rand = new Random();
