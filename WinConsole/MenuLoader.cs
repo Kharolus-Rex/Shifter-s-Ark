@@ -14,7 +14,7 @@ namespace WinConsole
 
             Console.WriteLine("Welcome to the Aether, Traveler. Want to see what new world I'm crafting?\nPlease, tell me what you'd like to see or know.\n");
 
-            Console.WriteLine("1) Rooms\n2) Weapons\n3) Potions\n4) Treasures\n5) Items\n6) Mobs\n7) Leave the Aether\n");
+            Console.WriteLine("1) Rooms\n2) Weapons\n3) Potions\n4) Treasures\n5) Items\n6) Mobs\n7) Test combat\n8) Leave the Aether\n");
 
             Console.Write("Response => ");
 
@@ -47,6 +47,10 @@ namespace WinConsole
                     case "6":
                         LibMobs.MobsList();
                         break;
+
+                    case "7":
+                        SimpleCombat.simpleCombat();
+                        break;
                 }
                 Console.WriteLine("Is there anything else you'd like to see, Traveler?\n");
                 Console.Write("Response => ");
@@ -54,7 +58,7 @@ namespace WinConsole
                 response = Console.ReadLine();
             }
 
-            if (response == "7")
+            if (response == "8")
             {
                 Console.WriteLine("\nGoodbye! Next time I should have much more for you to see, Traveler!\n");
                 Console.Write("Press the Enter key to exit.");

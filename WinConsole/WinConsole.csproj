@@ -43,11 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LibItems.cs" />
-    <Compile Include="LibPotions.cs" />
-    <Compile Include="LibRooms.cs" />
-    <Compile Include="LibTreasures.cs" />
-    <Compile Include="LibWeapons.cs" />
+    <Compile Include="Item, Weapon, Treasure\LibItems.cs" />
+    <Compile Include="Item, Weapon, Treasure\LibPotions.cs" />
+    <Compile Include="Rooms n Locations\LibRooms.cs" />
+    <Compile Include="Item, Weapon, Treasure\LibTreasures.cs" />
+    <Compile Include="Item, Weapon, Treasure\LibWeapons.cs" />
     <Compile Include="LibMobs.cs" />
     <Compile Include="MenuLoader.cs" />
     <Compile Include="Program.cs" />
@@ -58,22 +58,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Items.txt">
+    <Content Include="Item, Weapon, Treasure\Items.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Mobs.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Potions.txt">
+    <Content Include="Item, Weapon, Treasure\Potions.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Rooms.txt">
+    <Content Include="Rooms n Locations\Rooms.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Treasures.txt">
+    <Content Include="Item, Weapon, Treasure\Treasures.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Weapons.txt">
+    <Content Include="Item, Weapon, Treasure\Weapons.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
