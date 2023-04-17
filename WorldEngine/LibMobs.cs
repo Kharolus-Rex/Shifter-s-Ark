@@ -7,7 +7,7 @@ using System.IO;
 
 namespace WinConsole
 {
-    class LibMobs
+    public class LibMobs
     {
         public static void MobsList()
         {

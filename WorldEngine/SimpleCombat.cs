@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WinConsole
 {
-    class SimpleCombat
+    public class SimpleCombat
     {
         public static void CombatTest()
         {

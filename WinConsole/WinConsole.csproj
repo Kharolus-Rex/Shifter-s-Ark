@@ -43,39 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Item, Weapon, Treasure\LibItems.cs" />
-    <Compile Include="Item, Weapon, Treasure\LibPotions.cs" />
-    <Compile Include="Rooms n Locations\LibRooms.cs" />
-    <Compile Include="Item, Weapon, Treasure\LibTreasures.cs" />
-    <Compile Include="Item, Weapon, Treasure\LibWeapons.cs" />
-    <Compile Include="LibMobs.cs" />
-    <Compile Include="MenuLoader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SimpleCombat.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Item, Weapon, Treasure\Items.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Mobs.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Item, Weapon, Treasure\Potions.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Rooms n Locations\Rooms.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Item, Weapon, Treasure\Treasures.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Item, Weapon, Treasure\Weapons.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WorldEngine\WorldEngine.csproj">

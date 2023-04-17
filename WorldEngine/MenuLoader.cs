@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WinConsole
 {
-    class MenuLoader
+    public class MenuLoader
     {
         public static void MenuLoadMain()
         {
