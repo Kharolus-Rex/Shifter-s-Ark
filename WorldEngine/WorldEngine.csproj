@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7E17E47B-9F66-4B43-B389-A1372A88DA0F}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>WinConsole</RootNamespace>
-    <AssemblyName>WinConsole</AssemblyName>
+    <ProjectGuid>{0B46F03F-9391-4170-A4AC-BA3BAACF9FDC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WorldEngine</RootNamespace>
+    <AssemblyName>WorldEngine</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,31 +41,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class1.cs" />
     <Compile Include="Item, Weapon, Treasure\LibItems.cs" />
     <Compile Include="Item, Weapon, Treasure\LibPotions.cs" />
-    <Compile Include="Rooms n Locations\LibRooms.cs" />
     <Compile Include="Item, Weapon, Treasure\LibTreasures.cs" />
     <Compile Include="Item, Weapon, Treasure\LibWeapons.cs" />
     <Compile Include="LibMobs.cs" />
     <Compile Include="MenuLoader.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rooms n Locations\LibRooms.cs" />
     <Compile Include="SimpleCombat.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Item, Weapon, Treasure\Items.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Mobs.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Item, Weapon, Treasure\Potions.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Rooms n Locations\Rooms.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Item, Weapon, Treasure\Treasures.txt">
@@ -76,12 +65,12 @@
     <Content Include="Item, Weapon, Treasure\Weapons.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\WorldEngine\WorldEngine.csproj">
-      <Project>{0b46f03f-9391-4170-a4ac-ba3baacf9fdc}</Project>
-      <Name>WorldEngine</Name>
-    </ProjectReference>
+    <Content Include="Mobs.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Rooms n Locations\Rooms.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

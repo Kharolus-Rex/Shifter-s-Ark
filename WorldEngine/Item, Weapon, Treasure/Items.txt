@@ -1,0 +1,8 @@
+﻿cell key
+Just a simple cell key. Works on almost every door.
+torch
+A burny stick.
+moldy bone
+Try picking a lock with this!
+archaic mark
+? ? ?
