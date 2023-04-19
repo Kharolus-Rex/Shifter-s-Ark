@@ -34,14 +34,79 @@ namespace WorldEngine
                 World.itemDescs[i] = inputFile.ReadLine();
                 i++;
             }
+            inputFile.Close();
 
         }
 
         public static void LoadPotions()
         {
+            i = 0;
+            inputFile = File.OpenText("Potions.txt");
 
+            while (!inputFile.EndOfStream)
+            {
+                World.potions[i] = inputFile.ReadLine();
+                i++;
+            }
+            inputFile.Close();
+            i = 0;
+
+            inputFile = File.OpenText("PotionDescs.txt");
+
+            while (!inputFile.EndOfStream)
+            {
+                World.potionDescs[i] = inputFile.ReadLine();
+                i++;
+            }
+            inputFile.Close();
         }
 
-        //TODO - potions, treasures, weapons and their descriptions too
+        public static void LoadTreasures()
+        {
+            i = 0;
+            inputFile = File.OpenText("Treasures.txt");
+
+            while (!inputFile.EndOfStream)
+            {
+                World.treasures[i] = inputFile.ReadLine();
+                i++;
+            }
+            inputFile.Close();
+            i = 0;
+
+            inputFile = File.OpenText("TreasureDescs.txt");
+
+            while (!inputFile.EndOfStream)
+            {
+                World.treasureDescs[i] = inputFile.ReadLine();
+                i++;
+            }
+            inputFile.Close();
+        }
+
+        public static void LoadWeapons()
+        {
+            i = 0;
+            inputFile = File.OpenText("Weapons.txt");
+
+            while (!inputFile.EndOfStream)
+            {
+                World.weapons[i] = inputFile.ReadLine();
+                i++;
+            }
+            inputFile.Close();
+            i = 0;
+
+            inputFile = File.OpenText("WeaponDescs.txt");
+
+            while (!inputFile.EndOfStream)
+            {
+                World.weaponDescs[i] = inputFile.ReadLine();
+                i++;
+            }
+            inputFile.Close();
+        }
+
+        //TODO - ADD ROOMS LOADER
     }
 }

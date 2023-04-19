@@ -25,32 +25,35 @@ namespace WinConsole
                 switch (response)
                 {
                     case "1":
-                        LibRooms.RoomsList();
+                        //TODO - LIST ROOMS VIA WORLD CALL
                         break;
 
                     case "2":
-                        LibWeapons.WeaponsList();
+                        //TODO - LIST WEAPONS VIA WORLD CALL
                         break;
 
                     case "3":
-                        LibPotions.PotionsList();
+                        //TODO - LIST POTIONS VIA WORLD CALL
                         break;
 
                     case "4":
-                        LibTreasures.TreasuresList();
+                        //TODO - LIST TREASURES VIA WORLD CALL
                         break;
 
                     case "5":
-                        LibItems.ItemList();
+                        //TODO - LIST ITEMS VIA WORLD CALL
                         break;
 
                     case "6":
-                        LibMobs.MobsList();
+                        //TODO - LIST MOBS VIA WORLD CALL
                         break;
 
                     case "7":
                         SimpleCombat.CombatTest();
                         break;
+
+                    //AFTER ALL OF THESE CASES RUN POST-CHANGES TO CALLS:
+                    //TODO - ADD A CASE TO CHOOSE TO TEST COMBAT OR TO EXPLORE
 
                     default:
                         Console.WriteLine("The world didn't like that answer. Try again!");

@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WorldEngine;
 
 namespace WinConsole
 {
@@ -19,7 +20,12 @@ namespace WinConsole
     {
         static void Main(string[] args)
         {
-            
+            WorldLoad.LoadItems();
+            WorldLoad.LoadPotions();
+            WorldLoad.LoadTreasures();
+            WorldLoad.LoadWeapons();
+            //TODO - WORK ON ROOM LOAD CALL
+
             MenuLoader.MenuLoadMain();
 
         }
