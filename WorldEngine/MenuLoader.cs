@@ -51,6 +51,10 @@ namespace WinConsole
                     case "7":
                         SimpleCombat.CombatTest();
                         break;
+
+                    default:
+                        Console.WriteLine("The world didn't like that answer. Try again!");
+                        break;
                 }
                 Console.WriteLine("Is there anything else you'd like to see, Traveler?\n");
                 Console.Write("Response => ");
