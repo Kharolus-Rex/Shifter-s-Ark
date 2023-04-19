@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using WorldEngine;
 
 namespace WinConsole
 {
@@ -21,15 +22,23 @@ namespace WinConsole
 
             //define
             item1 = inputFile.ReadLine();
-            item1Desc = inputFile.ReadLine();
             item2 = inputFile.ReadLine();
-            item2Desc = inputFile.ReadLine();
             item3 = inputFile.ReadLine();
-            item3Desc = inputFile.ReadLine();
             item4 = inputFile.ReadLine();
-            item4Desc = inputFile.ReadLine();
 
+            while (!inputFile.EndOfStream)
+            {
+                
+            }
+            
             inputFile.Close();
+
+            inputFile = File.OpenText("ItemDescs.txt");
+
+            item1Desc = inputFile.ReadLine();
+            item2Desc = inputFile.ReadLine();
+            item3Desc = inputFile.ReadLine();
+            item4Desc = inputFile.ReadLine();
 
             Console.WriteLine("\nCurrent items needed for various reasons are:\n" + item1 + ": " + item1Desc + "\n" + item2 + ": " + item2Desc + "\n" + item3 + ": " + item3Desc + "\n" + item4 + ": " + item4Desc + "\n");
 

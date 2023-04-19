@@ -19,7 +19,7 @@ namespace WinConsole
     {
         static void Main(string[] args)
         {
-
+            
             MenuLoader.MenuLoadMain();
 
         }
