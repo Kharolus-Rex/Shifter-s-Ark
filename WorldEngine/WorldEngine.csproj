@@ -42,10 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="World.cs" />
-    <Compile Include="Item, Weapon, Treasure\LibItems.cs" />
-    <Compile Include="Item, Weapon, Treasure\LibPotions.cs" />
-    <Compile Include="Item, Weapon, Treasure\LibTreasures.cs" />
-    <Compile Include="Item, Weapon, Treasure\LibWeapons.cs" />
+    <Compile Include="Items_Pots_Treasure_Weapons\LibItems.cs" />
+    <Compile Include="Items_Pots_Treasure_Weapons\LibPotions.cs" />
+    <Compile Include="Items_Pots_Treasure_Weapons\LibTreasures.cs" />
+    <Compile Include="Items_Pots_Treasure_Weapons\LibWeapons.cs" />
     <Compile Include="Mobs\LibMobs.cs" />
     <Compile Include="MenuLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -54,20 +54,20 @@
     <Compile Include="WorldLoad.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Item, Weapon, Treasure\ItemDescs.txt" />
-    <Content Include="Item, Weapon, Treasure\Items.txt">
+    <Content Include="Items_Pots_Treasure_Weapons\ItemDescs.txt" />
+    <Content Include="Items_Pots_Treasure_Weapons\Items.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Item, Weapon, Treasure\PotionDescs.txt" />
-    <Content Include="Item, Weapon, Treasure\Potions.txt">
+    <Content Include="Items_Pots_Treasure_Weapons\PotionDescs.txt" />
+    <Content Include="Items_Pots_Treasure_Weapons\Potions.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Item, Weapon, Treasure\TreasureDescs.txt" />
-    <Content Include="Item, Weapon, Treasure\Treasures.txt">
+    <Content Include="Items_Pots_Treasure_Weapons\TreasureDescs.txt" />
+    <Content Include="Items_Pots_Treasure_Weapons\Treasures.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Item, Weapon, Treasure\WeaponDescs.txt" />
-    <Content Include="Item, Weapon, Treasure\Weapons.txt">
+    <Content Include="Items_Pots_Treasure_Weapons\WeaponDescs.txt" />
+    <Content Include="Items_Pots_Treasure_Weapons\Weapons.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Mobs\Mobs.txt">

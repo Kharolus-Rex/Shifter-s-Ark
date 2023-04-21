@@ -24,7 +24,7 @@ namespace WinConsole
             WorldLoad.LoadPotions();
             WorldLoad.LoadTreasures();
             WorldLoad.LoadWeapons();
-            //TODO - WORK ON ROOM LOAD CALL
+            WorldLoad.LoadRooms();
 
             MenuLoader.MenuLoadMain();
 

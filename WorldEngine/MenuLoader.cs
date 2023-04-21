@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WorldEngine;
 
 namespace WinConsole
 {
@@ -26,6 +27,10 @@ namespace WinConsole
                 {
                     case "1":
                         //TODO - LIST ROOMS VIA WORLD CALL
+                        foreach (string room in World.rooms)
+                        {
+                            Console.WriteLine(room);
+                        }
                         break;
 
                     case "2":

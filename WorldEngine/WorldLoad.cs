@@ -13,7 +13,7 @@ namespace WorldEngine
         private static int i;
         public static void LoadItems()
         {
-            inputFile = File.OpenText("Items.txt");
+            inputFile = File.OpenText(@"..\WorldEngine\Items_Pots_Treasure_Weapons\Items.txt");
 
             i = 0;
 
@@ -107,6 +107,27 @@ namespace WorldEngine
             inputFile.Close();
         }
 
-        //TODO - ADD ROOMS LOADER
+        public static void LoadRooms()
+        {
+            i = 0;
+            inputFile = File.OpenText("Rooms.txt");
+
+            while (!inputFile.EndOfStream)
+            {
+                World.rooms[i] = inputFile.ReadLine();
+                i++;
+            }
+            inputFile.Close();
+            i = 0;
+
+            inputFile = File.OpenText("RoomDescs.txt");
+
+            while (!inputFile.EndOfStream)
+            {
+                World.roomDescs[i] = inputFile.ReadLine();
+                i++;
+            }
+            inputFile.Close();
+        }
     }
 }
