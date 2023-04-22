@@ -28,10 +28,7 @@ namespace WinConsole
             WorldLoad.LoadRooms();
             WorldLoad.LoadMobs();
 
-            //load menu, which will be done away with shortly.
-            //MenuLoader.MenuLoadMain();
-
-            //TODO - Work on directional movement and general world existence.
+            //initialize simple exploration and standard/idle view
             Exploration.ExploreStart();
             StandardMessages.NormalState();
         }

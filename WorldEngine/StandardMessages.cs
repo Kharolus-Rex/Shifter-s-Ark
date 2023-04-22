@@ -16,9 +16,6 @@ namespace WorldEngine
             action = Console.ReadLine().ToLower();
             do
             {
-                Console.WriteLine("You are currently in the " + World.rooms[World.RoomTracker] + ".");
-                Console.WriteLine("Please enter a command. Possible options: north, south, inventory, rooms, mobs, treasure\n");
-
                 switch (action)
                 {
                     case "north":
@@ -30,7 +27,7 @@ namespace WorldEngine
 
                     case "inventory":
                     case "inv":
-                        Console.WriteLine("In your inventory you currently have:");
+                        Console.WriteLine("\nIn your inventory you currently have:");
                         for (int i = 0; i < World.items.Length; i++)
                         {
                             Console.WriteLine($"{World.items[i]}. {World.itemDescs[i]}");
@@ -48,7 +45,23 @@ namespace WorldEngine
                             Console.WriteLine($"{World.treasures[i]}. {World.treasureDescs[i]}");
                         }
                         break;
+
+                    case "mobs":
+                        Console.WriteLine("\nThere are various mobs around, such as:");
+                        for (int i = 0; i < World.mobs.Length; i++)
+                        {
+                            Console.WriteLine($"{World.mobs[i]}. {World.mobDescs[i]}");
+                            i++;
+                        }
+                        break;
+
+                    default:
+                        Console.WriteLine("\nYour body refuses to follow that action through.");
+                        break;
                 }
+
+                Console.WriteLine($"\nYou are currently in the {World.rooms[World.RoomTracker]}.");
+                Console.WriteLine("Please enter a command. Possible options: north, south, inventory, rooms, mobs, treasure\n");
 
                 action = Console.ReadLine().ToLower();
 

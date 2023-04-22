@@ -44,7 +44,6 @@
     <Compile Include="Exploration.cs" />
     <Compile Include="StandardMessages.cs" />
     <Compile Include="World.cs" />
-    <Compile Include="MenuLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimpleCombat.cs" />
     <Compile Include="WorldLoad.cs" />
