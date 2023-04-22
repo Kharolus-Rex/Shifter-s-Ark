@@ -130,5 +130,28 @@ namespace WorldEngine
             }
             inputFile.Close();
         }
+
+        public static void LoadMobs()
+        {
+            i = 0;
+            inputFile = File.OpenText(@"TextFiles\Mobs\Mobs.txt");
+
+            while (!inputFile.EndOfStream)
+            {
+                World.mobs[i] = inputFile.ReadLine();
+                i++;
+            }
+            inputFile.Close();
+            i = 0;
+
+            inputFile = File.OpenText(@"TextFiles\Mobs\MobDescs.txt");
+
+            while (!inputFile.EndOfStream)
+            {
+                World.mobDescs[i] = inputFile.ReadLine();
+                i++;
+            }
+            inputFile.Close();
+        }
     }
 }

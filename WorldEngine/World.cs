@@ -28,6 +28,12 @@ namespace WorldEngine
         //items lists
         public static string[] items = new string[4];
         public static string[] itemDescs = new string[4];
-        
+
+        //mobs lists
+        public static string[] mobs = new string[5];
+        public static string[] mobDescs = new string[5];
+
+        //current room tracker, as this will likely be used in multiple places at once. it should be outside other methods and classes
+        public static int RoomTracker = 0; //initialized as 0 as that is the starting index for this list.
     }
 }

@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exploration.cs" />
+    <Compile Include="StandardMessages.cs" />
     <Compile Include="World.cs" />
     <Compile Include="MenuLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

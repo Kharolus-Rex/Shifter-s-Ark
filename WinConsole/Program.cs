@@ -20,14 +20,20 @@ namespace WinConsole
     {
         static void Main(string[] args)
         {
+            //Load stuff that falls under bare essentials
             WorldLoad.LoadItems();
             WorldLoad.LoadPotions();
             WorldLoad.LoadTreasures();
             WorldLoad.LoadWeapons();
             WorldLoad.LoadRooms();
+            WorldLoad.LoadMobs();
 
-            MenuLoader.MenuLoadMain();
+            //load menu, which will be done away with shortly.
+            //MenuLoader.MenuLoadMain();
 
+            //TODO - Work on directional movement and general world existence.
+            Exploration.ExploreStart();
+            StandardMessages.NormalState();
         }
     }
 }

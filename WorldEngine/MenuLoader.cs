@@ -26,7 +26,7 @@ namespace WinConsole
                 switch (response)
                 {
                     case "1":
-                        //TODO - LIST ROOMS VIA WORLD CALL
+                        // - LIST ROOMS VIA WORLD CALL
                         foreach (string room in World.rooms)
                         {
                             Console.WriteLine(room);
@@ -34,23 +34,23 @@ namespace WinConsole
                         break;
 
                     case "2":
-                        //TODO - LIST WEAPONS VIA WORLD CALL
+                        //T- LIST WEAPONS VIA WORLD CALL
                         break;
 
                     case "3":
-                        //TODO - LIST POTIONS VIA WORLD CALL
+                        // - LIST POTIONS VIA WORLD CALL
                         break;
 
                     case "4":
-                        //TODO - LIST TREASURES VIA WORLD CALL
+                        // - LIST TREASURES VIA WORLD CALL
                         break;
 
                     case "5":
-                        //TODO - LIST ITEMS VIA WORLD CALL
+                        // - LIST ITEMS VIA WORLD CALL
                         break;
 
                     case "6":
-                        //TODO - LIST MOBS VIA WORLD CALL
+                        // - LIST MOBS VIA WORLD CALL
                         break;
 
                     case "7":
@@ -58,7 +58,7 @@ namespace WinConsole
                         break;
 
                     //AFTER ALL OF THESE CASES RUN POST-CHANGES TO CALLS:
-                    //TODO - ADD A CASE TO CHOOSE TO TEST COMBAT OR TO EXPLORE
+                    // - ADD A CASE TO CHOOSE TO TEST COMBAT OR TO EXPLORE
 
                     default:
                         Console.WriteLine("The world didn't like that answer. Try again!");
