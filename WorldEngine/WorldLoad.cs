@@ -87,7 +87,7 @@ namespace WorldEngine
         public static void LoadWeapons()
         {
             i = 0;
-            inputFile = File.OpenText("Weapons.txt");
+            inputFile = File.OpenText(@"TextFiles\ItemsPotsTreasureWeapons\Weapons.txt");
 
             while (!inputFile.EndOfStream)
             {
@@ -98,7 +98,7 @@ namespace WorldEngine
             inputFile.Close();
             i = 0;
 
-            inputFile = File.OpenText("WeaponDescs.txt");
+            inputFile = File.OpenText(@"TextFiles\ItemsPotsTreasureWeapons\WeaponDescs.txt");
 
             while (!inputFile.EndOfStream)
             {
@@ -111,7 +111,7 @@ namespace WorldEngine
         public static void LoadRooms()
         {
             i = 0;
-            inputFile = File.OpenText("Rooms.txt");
+            inputFile = File.OpenText(@"TextFiles\RoomsAndLocations\Rooms.txt");
 
             while (!inputFile.EndOfStream)
             {
@@ -121,7 +121,7 @@ namespace WorldEngine
             inputFile.Close();
             i = 0;
 
-            inputFile = File.OpenText("RoomDescs.txt");
+            inputFile = File.OpenText(@"TextFiles\RoomsAndLocations\RoomDescs.txt");
 
             while (!inputFile.EndOfStream)
             {

@@ -1,4 +1,0 @@
-﻿cell key
-torch
-moldy bone
-archaic mark

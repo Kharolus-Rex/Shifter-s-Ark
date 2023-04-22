@@ -1,6 +1,3 @@
-﻿longsword +1
 Just a better longsword.
-scroll of Magic Missile
 Free damage!
-scroll of ???
 Still not telling you anything.
