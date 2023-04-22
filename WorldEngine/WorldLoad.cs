@@ -13,7 +13,7 @@ namespace WorldEngine
         private static int i;
         public static void LoadItems()
         {
-            inputFile = File.OpenText(@"..\WorldEngine\Items_Pots_Treasure_Weapons\Items.txt");
+            inputFile = File.OpenText(@"TextFiles\ItemsPotsTreasureWeapons\Items.txt");
 
             i = 0;
 
@@ -27,7 +27,7 @@ namespace WorldEngine
 
             inputFile.Close();
 
-            inputFile = File.OpenText("ItemDescs.txt");
+            inputFile = File.OpenText(@"TextFiles\ItemsPotsTreasureWeapons\ItemDescs.txt");
 
             while (!inputFile.EndOfStream)
             {
@@ -41,7 +41,7 @@ namespace WorldEngine
         public static void LoadPotions()
         {
             i = 0;
-            inputFile = File.OpenText("Potions.txt");
+            inputFile = File.OpenText(@"TextFiles\ItemsPotsTreasureWeapons\Potions.txt");
 
             while (!inputFile.EndOfStream)
             {
@@ -51,7 +51,7 @@ namespace WorldEngine
             inputFile.Close();
             i = 0;
 
-            inputFile = File.OpenText("PotionDescs.txt");
+            inputFile = File.OpenText(@"TextFiles\ItemsPotsTreasureWeapons\PotionDescs.txt");
 
             while (!inputFile.EndOfStream)
             {
@@ -64,7 +64,7 @@ namespace WorldEngine
         public static void LoadTreasures()
         {
             i = 0;
-            inputFile = File.OpenText("Treasures.txt");
+            inputFile = File.OpenText(@"TextFiles\ItemsPotsTreasureWeapons\Treasures.txt");
 
             while (!inputFile.EndOfStream)
             {
@@ -74,7 +74,7 @@ namespace WorldEngine
             inputFile.Close();
             i = 0;
 
-            inputFile = File.OpenText("TreasureDescs.txt");
+            inputFile = File.OpenText(@"TextFiles\ItemsPotsTreasureWeapons\TreasureDescs.txt");
 
             while (!inputFile.EndOfStream)
             {
@@ -92,6 +92,7 @@ namespace WorldEngine
             while (!inputFile.EndOfStream)
             {
                 World.weapons[i] = inputFile.ReadLine();
+                World.weaponDmg[i] = inputFile.ReadLine();
                 i++;
             }
             inputFile.Close();

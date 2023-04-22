@@ -1,0 +1,4 @@
+﻿Minor Healing
+Heal 8 hp on average
+Minor Invisibility
+You got a minute. Breaks on attack action.

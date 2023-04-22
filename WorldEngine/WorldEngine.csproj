@@ -42,38 +42,34 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="World.cs" />
-    <Compile Include="Items_Pots_Treasure_Weapons\LibItems.cs" />
-    <Compile Include="Items_Pots_Treasure_Weapons\LibPotions.cs" />
-    <Compile Include="Items_Pots_Treasure_Weapons\LibTreasures.cs" />
-    <Compile Include="Items_Pots_Treasure_Weapons\LibWeapons.cs" />
-    <Compile Include="Mobs\LibMobs.cs" />
     <Compile Include="MenuLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rooms n Locations\LibRooms.cs" />
     <Compile Include="SimpleCombat.cs" />
     <Compile Include="WorldLoad.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Items_Pots_Treasure_Weapons\ItemDescs.txt" />
-    <Content Include="Items_Pots_Treasure_Weapons\Items.txt">
+    <Content Include="TextFiles\ItemsPotsTreasureWeapons\ItemDescs.txt" />
+    <Content Include="TextFiles\ItemsPotsTreasureWeapons\Items.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Items_Pots_Treasure_Weapons\PotionDescs.txt" />
-    <Content Include="Items_Pots_Treasure_Weapons\Potions.txt">
+    <Content Include="TextFiles\ItemsPotsTreasureWeapons\PotionDescs.txt" />
+    <Content Include="TextFiles\ItemsPotsTreasureWeapons\Potions.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Items_Pots_Treasure_Weapons\TreasureDescs.txt" />
-    <Content Include="Items_Pots_Treasure_Weapons\Treasures.txt">
+    <Content Include="TextFiles\ItemsPotsTreasureWeapons\TreasureDescs.txt" />
+    <Content Include="TextFiles\ItemsPotsTreasureWeapons\Treasures.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Items_Pots_Treasure_Weapons\WeaponDescs.txt" />
-    <Content Include="Items_Pots_Treasure_Weapons\Weapons.txt">
+    <Content Include="TextFiles\ItemsPotsTreasureWeapons\WeaponDescs.txt" />
+    <Content Include="TextFiles\ItemsPotsTreasureWeapons\Weapons.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Mobs\Mobs.txt">
+    <Content Include="TextFiles\Mobs\MobDescs.txt" />
+    <Content Include="TextFiles\Mobs\Mobs.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Rooms n Locations\Rooms.txt">
+    <Content Include="TextFiles\RoomsAndLocations\RoomDescs.txt" />
+    <Content Include="TextFiles\RoomsAndLocations\Rooms.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

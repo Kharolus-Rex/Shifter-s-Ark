@@ -55,5 +55,31 @@
       <Name>WorldEngine</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="TextFiles\ItemsPotsTreasureWeapons\ItemDescs.txt" />
+    <Content Include="TextFiles\ItemsPotsTreasureWeapons\Items.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TextFiles\ItemsPotsTreasureWeapons\PotionDescs.txt" />
+    <Content Include="TextFiles\ItemsPotsTreasureWeapons\Potions.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TextFiles\ItemsPotsTreasureWeapons\TreasureDescs.txt" />
+    <Content Include="TextFiles\ItemsPotsTreasureWeapons\Treasures.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TextFiles\ItemsPotsTreasureWeapons\WeaponDescs.txt" />
+    <Content Include="TextFiles\ItemsPotsTreasureWeapons\Weapons.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TextFiles\Mobs\MobDescs.txt" />
+    <Content Include="TextFiles\Mobs\Mobs.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TextFiles\RoomsAndLocations\RoomDescs.txt" />
+    <Content Include="TextFiles\RoomsAndLocations\Rooms.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -14,6 +14,7 @@ namespace WorldEngine
 
         //weapons lists
         public static string[] weapons = new string[5];
+        public static string[] weaponDmg = new string[5];
         public static string[] weaponDescs = new string[5];
 
         //treasures lists
