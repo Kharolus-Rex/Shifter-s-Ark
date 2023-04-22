@@ -31,6 +31,7 @@ namespace WinConsole
             //initialize simple exploration and standard/idle view
             Exploration.ExploreStart();
             StandardMessages.NormalState();
+            StandardMessages.ExitState();
         }
     }
 }

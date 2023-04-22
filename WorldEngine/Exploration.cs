@@ -11,7 +11,7 @@ namespace WorldEngine
         public static void ExploreStart()
         {
             Console.WriteLine($"You begin your journey in the {World.rooms[World.RoomTracker]}. {World.roomDescs[World.RoomTracker]}. What would you like to do?");
-            Console.WriteLine("Please enter a command. Possible options: north, south, inventory, rooms, mobs, treasure\n");
+            Console.WriteLine("Please enter a command. Possible options: north, south, inventory, weapons, potions, mobs, treasure.\nType exit to leave the realm.\n");
         }
         public static void Movement(string Direction)
         {
@@ -19,13 +19,18 @@ namespace WorldEngine
             {
                 case "north":
                 case "n":
+                    if (World.RoomTracker == 5)
+                    {
+                        Console.WriteLine("\nThere is only a solid wall of stone in your path. You cannot travel this way.");
+                        break;
+                    }
                     World.RoomTracker++;
                     break;
                 case "south":
                 case "s":
                     if (World.RoomTracker == 0)
                     {
-                        Console.WriteLine("There is only a solid wall of stone in your path. You cannot travel this way.");
+                        Console.WriteLine("\nThere is only a solid wall of stone in your path. You cannot travel this way.");
                         break;
                     }
                     World.RoomTracker--;
