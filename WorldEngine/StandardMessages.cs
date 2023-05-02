@@ -8,6 +8,7 @@ namespace WorldEngine
 {
     public class StandardMessages
     {
+        //NormalState is basic travel.
         public static void NormalState()
         {
             string action;
@@ -82,6 +83,7 @@ namespace WorldEngine
             } while (action != "exit");
         }
 
+        //ExitState is when the user explicitly exits the game.
         public static void ExitState()
         {
             Console.WriteLine("\nA portal opens beneath you, dropping you into a vast expanse. Enjoy the fall!");

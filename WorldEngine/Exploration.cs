@@ -8,11 +8,15 @@ namespace WorldEngine
 {
     public class Exploration
     {
+        //Initial spawn point for the player's journey.
         public static void ExploreStart()
         {
             Console.WriteLine($"You begin your journey in the {World.rooms[World.RoomTracker]}. {World.roomDescs[World.RoomTracker]}. What would you like to do?");
             Console.WriteLine("Please enter a command. Possible options: north, south, inventory, weapons, potions, mobs, treasure.\nType exit to leave the realm.\n");
         }
+
+        //Contains the switch statement to decide if the user is able to move or not.
+        //TODO - Add east and west options. Also remember that the Room class is gonna be a biiiiiitch to do.
         public static void Movement(string Direction)
         {
             switch (Direction)
