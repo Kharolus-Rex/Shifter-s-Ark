@@ -25,8 +25,8 @@ namespace WinConsole
             WorldLoad.LoadPotions();
             WorldLoad.LoadTreasures();
             WorldLoad.LoadWeapons();
-            WorldLoad.LoadRooms();
             WorldLoad.LoadMobs();
+            WorldLoad.LoadRooms();
 
             //initialize simple exploration and standard/idle view
             Exploration.ExploreStart();
