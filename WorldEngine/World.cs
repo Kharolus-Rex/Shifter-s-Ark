@@ -29,7 +29,7 @@ namespace WorldEngine
 
         public static List<Player> players = new List<Player>();
 
-        public static Room CurrentRoom = FindRoomByID(World.players[0].Location);
+        //public static Room CurrentRoom = FindRoomByID(World.players[0].Location);
 
         public static Room FindRoomByID(int roomId)
         {

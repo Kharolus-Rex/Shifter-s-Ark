@@ -50,6 +50,7 @@
     <None Include="App.config" />
     <None Include="Files\CSVFiles\items.csv" />
     <None Include="Files\CSVFiles\mobs.csv" />
+    <None Include="Files\CSVFiles\players.csv" />
     <None Include="Files\CSVFiles\potions.csv" />
     <None Include="Files\CSVFiles\rooms.csv" />
     <None Include="Files\CSVFiles\treasures.csv" />

@@ -26,10 +26,11 @@ namespace WinConsole
             WorldLoad.LoadWeapons();
             WorldLoad.LoadMobs();
             WorldLoad.LoadRooms();
+            WorldLoad.LoadPlayer();
 
             //initialize simple exploration and standard/idle view
             //PlayerSaveLoad.PlayerCheck(); Will impliment later. Player will be hard coded for now.
-            StandardMessages.NormalState(World.CurrentRoom, World.players[0]);
+            //StandardMessages.NormalState(World.CurrentRoom, World.players[0]);
             StandardMessages.GameplayLoop();
             StandardMessages.ExitState();
         }

@@ -61,7 +61,7 @@ namespace WorldEngine
                         break;
 
                     case "look":
-                        LookState(World.CurrentRoom);
+                        //LookState(World.CurrentRoom);
                         break;
 
                     default:
@@ -70,7 +70,7 @@ namespace WorldEngine
                 }
 
                 //Console.WriteLine($"\nYou are currently in the {}."); //TODO - COME FIX THIS LATER
-                NormalState(World.CurrentRoom, World.players[0]);
+                //StandardMessages.NormalState(World.CurrentRoom, World.players[0]);
 
                 action = Console.ReadLine().ToLower();
 

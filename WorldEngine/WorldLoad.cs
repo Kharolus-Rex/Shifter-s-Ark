@@ -190,10 +190,10 @@ namespace WorldEngine
                     int hp = int.Parse(data[5]);
                     int ac = int.Parse(data[6]);
                     int location = int.Parse(data[7]);
-                    int items = int.Parse(data[8]);
-                    int potions = int.Parse(data[9]);
-                    int weapons = int.Parse(data[10]);
-                    int treasures = int.Parse(data[11]);
+                    int items = data[8] != "" ? items = int.Parse(data[8]) : items = 0;
+                    int potions = data[9] != "" ? potions = int.Parse(data[9]) : potions = 0;
+                    int weapons = data[10] != "" ? weapons = int.Parse(data[10]) : weapons = 0;
+                    int treasures = data [11] != "" ? treasures = int.Parse(data[11]) : treasures = 0;
                     string quests = data[12];
 
                     List<Item> item = new List<Item> { World.items.FirstOrDefault(i => i.IdNumber == items) };
@@ -204,7 +204,6 @@ namespace WorldEngine
 
                     Player player = new Player(idNumber, name, password, race, playerClass, hp, ac, location, item, potion, weapon, treasure, quest);
                     World.players.Add(player);
-                    //TODO - MAKE A PLAYER CSV
                 }
             }
         }
