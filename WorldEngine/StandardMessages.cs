@@ -54,7 +54,6 @@ namespace WorldEngine
 
                     case "collect":
                         Exploration.CollectThings();
-                        //TODO - Take items currently in room and add to inventory.
                         break;
 
                     default:

@@ -70,7 +70,28 @@ namespace WorldEngine
 
         public static void CollectThings()
         {
-            for (int i = 0; i < )
+            for (int i = 0; i < World.rooms[World.players[0].Location].Items.Count; i++)
+            {
+                World.players[0].Items.Add(World.rooms[World.players[0].Location].Items[i]);
+                World.rooms[World.players[0].Location].Items.RemoveAt(i);
+                //in theory, this should add the item at index i (like healing pot) to player
+                //and then remove it from the global room list, so it can't respawn right now.
+            }
+            for (int i = 0; i < World.rooms[World.players[0].Location].Potions.Count; i++)
+            {
+                World.players[0].Potions.Add(World.rooms[World.players[0].Location].Potions[i]);
+                World.rooms[World.players[0].Location].Potions.RemoveAt(i);
+            }
+            for (int i = 0; i < World.rooms[World.players[0].Location].Weapons.Count; i++)
+            {
+                World.players[0].Weapons.Add(World.rooms[World.players[0].Location].Weapons[i]);
+                World.rooms[World.players[0].Location].Weapons.RemoveAt(i);
+            }
+            for (int i = 0; i < World.rooms[World.players[0].Location].Treasures.Count; i++)
+            {
+                World.players[0].Treasures.Add(World.rooms[World.players[0].Location].Treasures[i]);
+                World.rooms[World.players[0].Location].Treasures.RemoveAt(i);
+            }
         }
 
     }
