@@ -106,37 +106,43 @@ namespace WorldEngine
 
         public static void LoadRooms()
         {
-            using (var reader = new StreamReader("./CSVFiles/rooms.csv"))
+            //take two
+            //TAKE TWO WORKED AAAAAAAAYYYYYYYYYYYYY
+            using (StreamReader reader = new StreamReader("./CSVFiles/rooms.csv"))
             {
-                //skip the first line
+                List<Room> rooms = new List<Room>();
+
                 reader.ReadLine();
 
                 while (!reader.EndOfStream)
                 {
-                    var row = reader.ReadLine().Split(',');
+                    var data = reader.ReadLine().Split(',');
 
-                    List<int> exits = new List<int>();
+                    int id = int.Parse(data[0]);
+                    string name = data[1];
+                    string description = data[2];
+                    List<int> Exits = new List<int> { int.Parse(data[3]), int.Parse(data[4]), int.Parse(data[5]), int.Parse(data[6]) };
+                    //List<Potion> potion = data[7] != "" ? new List<Potion> { World.potions.FirstOrDefault(p => p.IdNumber == potions) } : new List<Potion>();
+                    //List<Weapon> weapon = data[8] != "" ? new List<Weapon> { World.weapons[int.Parse(data[8])] } : new List<Weapon>();
+                    //List<Mob> mob = data[9] != "" ? new List<Mob> { World.mobs[int.Parse(data[9])] } : new List<Mob>();
+                    //List<Treasure> treasures = data[10] != "" ? new List<Treasure> { World.treasures[int.Parse(data[10])] } : new List<Treasure>();
+                    //List<Item> items = data[11] != "" ? new List<Item> { World.items[int.Parse(data[11])] } : new List<Item>();
+                    int potions = data[7] != "" ? potions = int.Parse(data[7]) : potions = 0;
+                    int weapons = data[8] != "" ? weapons = int.Parse(data[8]) : weapons = 0;
+                    int mobs = data[9] != "" ? mobs = int.Parse(data[9]) : mobs = 0;
+                    int treasures = data[10] != "" ? treasures = int.Parse(data[10]) : treasures = 0;
+                    int items = data[11] != "" ? items = int.Parse(data[11]) : items = 0;
 
-                    int id = int.Parse(row[0]);
-                    string name = row[1];
-                    string description = row[2];
-                    exits.Add(int.Parse(row[3]));
-                    exits.Add(int.Parse(row[4]));
-                    exits.Add(int.Parse(row[5]));
-                    exits.Add(int.Parse(row[6]));
-                    int potions = int.Parse(row[7]);
-                    int weapons = int.Parse(row[8]);
-                    int mobs = int.Parse(row[9]);
-                    int treasures = int.Parse(row[10]);
-                    int items = int.Parse(row[11]);
+                    
 
-                    List<Potion> potion = new List<Potion> { World.potions.FirstOrDefault(p => p.IdNumber == potions) };
-                    List<Weapon> weapon = new List<Weapon> { World.weapons.FirstOrDefault(w => w.IdNumber == weapons) };
-                    List<Mob> mob = new List<Mob> { World.mobs.FirstOrDefault(m => m.IdNumber == mobs) };
-                    List<Treasure> treasure = new List<Treasure> { World.treasures.FirstOrDefault(t => t.IdNumber == treasures) };
-                    List<Item> item = new List<Item> { World.items.FirstOrDefault(i => i.IdNumber == items) };
+                    List<Potion> potion = data[7] != "0" ? new List<Potion> { World.potions.FirstOrDefault(p => p.IdNumber == potions) } : new List<Potion>();
+                    List<Weapon> weapon = data[8] != "0" ? new List<Weapon> { World.weapons.FirstOrDefault(w => w.IdNumber == weapons) } : new List<Weapon>();
+                    List<Mob> mob = data[9] != "0" ? new List<Mob> { World.mobs.FirstOrDefault(m => m.IdNumber == mobs) } : new List<Mob>();
+                    List<Treasure> treasure = data[10] != "0" ? new List<Treasure> { World.treasures.FirstOrDefault(t => t.IdNumber == treasures) } : new List<Treasure>();
+                    List<Item> item = data[11] != "0" ? new List<Item> { World.items.FirstOrDefault(i => i.IdNumber == items) } : new List<Item>();
 
-                    Room room = new Room(id, name, description, exits, potion, weapon, mob, treasure, item);
+
+                    Room room = new Room(id, name, description, Exits, potion, weapon, mob, treasure, item);
                     World.rooms.Add(room);
                 }
             }

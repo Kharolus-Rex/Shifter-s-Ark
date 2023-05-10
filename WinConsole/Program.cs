@@ -28,6 +28,7 @@ namespace WinConsole
             WorldLoad.LoadRooms();
 
             //initialize simple exploration and standard/idle view
+            //PlayerSaveLoad.PlayerCheck(); Will impliment later. Player will be hard coded for now.
             StandardMessages.CheckAction();
             StandardMessages.ExitState();
         }

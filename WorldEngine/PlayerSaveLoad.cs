@@ -81,7 +81,7 @@ namespace WorldEngine
 
             File.WriteAllLines(filePath, lines);
         }
-        public static void PlayerCheck(string[] args)
+        public static void PlayerCheck()
         {
             Console.WriteLine("Please enter your name: ");
             string playerName = Console.ReadLine();
