@@ -44,6 +44,10 @@ namespace WorldEngine
             Weapons = weapons;
 
             Mobs = mobs;
+
+            Treasures = treasures;
+
+            Items = items;
         }
 
         public int IdNumber { get { return _idNumber; } set { _idNumber = value; } }
