@@ -1,3 +1,0 @@
-﻿longsword +1
-scroll of Magic Missile
-scroll of ???

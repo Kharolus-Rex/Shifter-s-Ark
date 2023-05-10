@@ -1,0 +1,6 @@
+ID,Name,Description,Damage,DamageType,Price
+01,greatsword,It's one big sword,2d6,slash,50
+02,longsword,"It's a long sword, but not long reach",1d10,slash,15
+03,rapier,Pointy!,1d8,pierce,25
+04,club,Bonk!,1d4,bludgeon,1
+05,dagger,"Small, throwable, weak. Like a goblin",1d4,pierce,2

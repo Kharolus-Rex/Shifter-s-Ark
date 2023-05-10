@@ -1,2 +1,0 @@
-Heal 8 hp on average
-You got a minute. Breaks on attack action.

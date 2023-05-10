@@ -48,6 +48,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Files\CSVFiles\items.csv" />
+    <None Include="Files\CSVFiles\mobs.csv" />
+    <None Include="Files\CSVFiles\potions.csv" />
+    <None Include="Files\CSVFiles\treasures.csv" />
+    <None Include="Files\CSVFiles\weapons.csv" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WorldEngine\WorldEngine.csproj">
@@ -56,28 +61,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Files\TextFiles\ItemsPotsTreasureWeapons\ItemDescs.txt" />
-    <Content Include="Files\TextFiles\ItemsPotsTreasureWeapons\Items.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Files\TextFiles\ItemsPotsTreasureWeapons\PotionDescs.txt" />
-    <Content Include="Files\TextFiles\ItemsPotsTreasureWeapons\Potions.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Files\TextFiles\ItemsPotsTreasureWeapons\TreasureDescs.txt" />
-    <Content Include="Files\TextFiles\ItemsPotsTreasureWeapons\Treasures.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Files\TextFiles\ItemsPotsTreasureWeapons\WeaponDescs.txt" />
-    <Content Include="Files\TextFiles\ItemsPotsTreasureWeapons\Weapons.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Files\TextFiles\Mobs\MobDescs.txt" />
-    <Content Include="Files\TextFiles\Mobs\Mobs.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Files\TextFiles\RoomsAndLocations\RoomDescs.txt" />
-    <Content Include="Files\TextFiles\RoomsAndLocations\Rooms.txt">
+    <Content Include="Files\CSVFiles\RoomsAndLocations\RoomDescs.txt" />
+    <Content Include="Files\CSVFiles\RoomsAndLocations\Rooms.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
