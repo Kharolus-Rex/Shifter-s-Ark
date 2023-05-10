@@ -61,7 +61,8 @@ namespace WorldEngine
                         break;
 
                     case "look":
-                        //LookState(World.CurrentRoom);
+                        Room room = World.FindRoomByID(World.players[0].Location);
+                        LookState(room);
                         break;
 
                     default:
@@ -100,9 +101,12 @@ namespace WorldEngine
         { 
             //display mobs
             Console.WriteLine("Mobs:");
-            foreach (Mob mob in room.Mobs)
+            if (room.Mobs != null)
             {
-                Console.WriteLine($" - {mob.Name}");
+                foreach (Mob mob in room.Mobs)
+                {
+                    Console.WriteLine($" - {mob.Name}");
+                }
             }
 
             //display items

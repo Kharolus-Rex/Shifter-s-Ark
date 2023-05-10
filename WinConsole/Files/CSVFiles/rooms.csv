@@ -2,8 +2,8 @@ idNumber,name,description,north,south,east,west,potions,weapons,mobs,treasures,i
 01,Sewer Entrance,It stinks,02,-1,-1,-1,,,,02,02
 02,Sewer Hall 1,Still stinks bad.,04,01,-1,-1,01,05,01,,
 03,Small Storage,A room with small items,-1,-1,02,-1,01,02,,,01
-04,Sewer Hall 2,Still stinks bad.,08,02,07,05,01,04,04,02,
+04,Sewer Hall 2,Stinks worse.,08,02,07,05,01,04,04,02,
 05,Corner Room,It's moldy in here.,06,-1,-1,-1,,,02,,03
 06,Small Bedroom,Even more mold!,-1,05,-1,-1,02,01,03,01,04
 07,Sewage Drain,Worst stench ever.,-1,-1,-1,04,01,03,01,,
-08,Sewer Hall End,Still stinks bad.,-1,04,-1,-1,02,,05,02,
+08,Sewer Hall End,Still stinks bad.,-1,04,-1,-1,02,,05,02,north
