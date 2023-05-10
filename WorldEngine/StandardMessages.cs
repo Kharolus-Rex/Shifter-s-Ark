@@ -30,75 +30,25 @@ namespace WorldEngine
 
                     case "inventory":
                     case "inv":
-
-                        Console.WriteLine("\nWhat would you like to look for?\nPlease enter potions, items, weapons or treasures.\n");
-                        action = Console.ReadLine().ToLower();
-
-                        switch (action)
-                        {
-                            case "potions":
-                            case "pots":
                                 //TODO - run through inven potions.
                                 //for loop i < player.potions.length;
-                                foreach (Potion potion in World.players[0].Potions)
-                                {
-                                    Console.WriteLine(potion.Name); //TODO - USE AS REFERENCE FOR PRINTING INVENTORY OUT. ALL OF IT IN ONE INVENTORY/INV/INVEN COMMAND
-                                }
-                                break;
-                            case "items":
-                                //TODO - run through inven items.
-                                break;
-                            case "weapons":
-                                //TODO - run through inven weapons.
-                                break;
-                            case "treasures":
-                                //TODO - run through inven treasures.
-                                break;
-                            default: //simple default to inform user of incorrect input.
-                                Console.WriteLine("\nYou can't seem to find anything by that name or concept.");
-                                break;
+                        foreach (Potion potion in World.players[0].Potions)
+                        {
+                            Console.WriteLine(potion.Name);
+                        }
+                        foreach (Item item in World.players[0].Items)
+                        {
+                            Console.WriteLine(item.Name);
+                        }
+                        foreach (Weapon weapon in World.players[0].Weapons)
+                        {
+                            Console.WriteLine(weapon.Name);
+                        }
+                        foreach (Treasure treasure in World.players[0].Treasures)
+                        {
+                            Console.WriteLine(treasure.Name);
                         }
                         break;
-                    //    Console.WriteLine("\nIn your inventory you currently have:");
-                    //    for (int i = 0; i < World.items.Count; i++)
-                    //    {
-                    //        Console.WriteLine($"{World.items[i]}. {World.items[i].Description}");
-                    //    }
-                    //    break;
-
-                    //case "weapons":
-                    //    Console.WriteLine("\nIn your inventory you currently have:");
-                    //    for (int i = 0; i < World.weapons.Count; i++)
-                    //    {
-                    //        Console.WriteLine($"{World.weapons[i]}. {World.weapons[i].Description} It deals {World.weapons[i].Damage} damage.");
-                    //    }
-                    //    break;
-
-                    //case "potions":
-                    //case "pots":
-                    //    Console.WriteLine("\nIn your inventory you currently have:");
-                    //    for (int i = 0; i < World.potions.Count; i++)
-                    //    {
-                    //        Console.WriteLine($"{World.potions[i]}. {World.potions[i].Description}");
-                    //    }
-                    //    break;
-
-                    //case "treasure":
-                    //    Console.WriteLine("You have the following treasures:");
-                    //    for (int i = 0; i < World.treasures.Count; i++)
-                    //    {
-                    //        Console.WriteLine($"{World.treasures[i]}. {World.treasures[i].Description}");
-                    //    }
-                    //    break;
-
-                    //case "mobs":
-
-                    //    Console.WriteLine("\nThere are various mobs around, such as:");
-                    //    for (int i = 0; i < World.mobs.Count; i++)
-                    //    {
-                    //        Console.WriteLine($"{World.mobs[i]}. {World.mobs[i].Description}");
-                    //    }
-                    //    break;
 
                     default:
 
