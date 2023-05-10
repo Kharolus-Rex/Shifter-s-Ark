@@ -28,7 +28,6 @@ namespace WinConsole
             WorldLoad.LoadRooms();
 
             //initialize simple exploration and standard/idle view
-            Exploration.ExploreStart();
             StandardMessages.CheckAction();
             StandardMessages.ExitState();
         }

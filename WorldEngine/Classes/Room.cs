@@ -11,17 +11,14 @@ namespace WorldEngine
         private int _idNumber;
         private string _name;
         private string _description;
-        private int _north;
-        private int _south;
-        private int _east;
-        private int _west;
+        private List<int> _exits;
         private List<Potion> _potions;
         private List<Weapon> _weapons;
         private List<Mob> _mobs;
         private List<Treasure> _treasures;
         private List<Item> _items;
 
-        public Room(int idNumber, string name, string description, int north, int south, int east, int west, List<Potion> potions, List<Weapon> weapons, List<Mob> mobs, List<Treasure> treasures, List<Item> items)
+        public Room(int idNumber, string name, string description, List<int> exits, List<Potion> potions, List<Weapon> weapons, List<Mob> mobs, List<Treasure> treasures, List<Item> items)
         {
             IdNumber = idNumber;
 
@@ -29,13 +26,7 @@ namespace WorldEngine
 
             Description = description;
 
-            North = north;
-
-            South = south;
-
-            East = east;
-
-            West = west;
+            Exits = exits;
 
             Potions = potions;
 
@@ -51,10 +42,7 @@ namespace WorldEngine
         public int IdNumber { get { return _idNumber; } set { _idNumber = value; } }
         public string Name { get { return _name; } set { _name = value; } }
         public string Description { get { return _description; } set { _description = value; } }
-        public int North { get { return _north; } set { _north = value; } }
-        public int South { get { return _south; } set { _south = value; } }
-        public int East { get { return _east; } set { _east = value; } }
-        public int West { get { return _west; } set { _west = value; } }
+        public List<int> Exits { get { return _exits; } set { _exits = value; } }
         public List<Potion> Potions { get { return _potions; } set { _potions = value; } }
         public List<Weapon> Weapons { get { return _weapons; } set { _weapons = value; } }
         public List<Mob> Mobs { get { return _mobs; } set { _mobs = value; } }

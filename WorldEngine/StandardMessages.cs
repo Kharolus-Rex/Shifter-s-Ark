@@ -101,7 +101,7 @@ namespace WorldEngine
                         break;
                 }
 
-                Console.WriteLine($"\nYou are currently in the {World.rooms[World.RoomTracker]}.");
+                //Console.WriteLine($"\nYou are currently in the {}."); //TODO - COME FIX THIS LATER
                 Console.WriteLine("Please enter a command. Possible options: north, south, inventory, weapons, potions, mobs, treasure.\nType exit to leave the realm.\n");
 
                 action = Console.ReadLine().ToLower();
@@ -116,5 +116,12 @@ namespace WorldEngine
             Console.WriteLine("Press any key to exit.");
             Console.ReadLine();
         }
+
+        //public static void DisplayCurrentRoom()
+        //{
+        //    int location = 
+        //    Room currentRoom = World.rooms.FirstOrDefault()
+        //}
+        //TODO - FINISH CURRENT ROOM STUFF AFTER PLAYER IS DONE COMPLETELY.
     }
 }

@@ -115,13 +115,15 @@ namespace WorldEngine
                 {
                     var row = reader.ReadLine().Split(',');
 
+                    List<int> exits = new List<int>();
+
                     int id = int.Parse(row[0]);
                     string name = row[1];
                     string description = row[2];
-                    int north = int.Parse(row[3]);
-                    int south = int.Parse(row[4]);
-                    int east = int.Parse(row[5]);
-                    int west = int.Parse(row[6]);
+                    exits.Add(int.Parse(row[3]));
+                    exits.Add(int.Parse(row[4]));
+                    exits.Add(int.Parse(row[5]));
+                    exits.Add(int.Parse(row[6]));
                     int potions = int.Parse(row[7]);
                     int weapons = int.Parse(row[8]);
                     int mobs = int.Parse(row[9]);
@@ -134,7 +136,7 @@ namespace WorldEngine
                     List<Treasure> treasure = new List<Treasure> { World.treasures.FirstOrDefault(t => t.IdNumber == treasures) };
                     List<Item> item = new List<Item> { World.items.FirstOrDefault(i => i.IdNumber == items) };
 
-                    Room room = new Room(id, name, description, north, south, east, west, potion, weapon, mob, treasure, item);
+                    Room room = new Room(id, name, description, exits, potion, weapon, mob, treasure, item);
                     World.rooms.Add(room);
                 }
             }
@@ -164,6 +166,43 @@ namespace WorldEngine
 
                     Mob mob = new Mob(id, name, description, race, CLass, HP, AC, weapon);
                     World.mobs.Add(mob);
+                }
+            }
+        }
+
+        public static void LoadPlayer()
+        {
+            using (var reader = new StreamReader("./CSVFiles/players.csv"))
+            {
+                //skip first
+                reader.ReadLine();
+
+                while (!reader.EndOfStream)
+                {
+                    var data = reader.ReadLine().Split(',');
+
+                    int idNumber = int.Parse(data[0]);
+                    string name = data[1];
+                    string password = data[2];
+                    string race = data[3];
+                    string playerClass = data[4];
+                    int hp = int.Parse(data[5]);
+                    int ac = int.Parse(data[6]);
+                    int location = int.Parse(data[7]);
+                    int items = int.Parse(data[8]);
+                    int potions = int.Parse(data[9]);
+                    int weapons = int.Parse(data[10]);
+                    int treasures = int.Parse(data[11]);
+                    string quests = data[12];
+
+                    List<Item> item = new List<Item> { World.items.FirstOrDefault(i => i.IdNumber == items) };
+                    List<Potion> potion = new List<Potion> { World.potions.FirstOrDefault(p => p.IdNumber == potions) };
+                    List<Weapon> weapon = new List<Weapon> { World.weapons.FirstOrDefault(w => w.IdNumber == weapons) };
+                    List<Treasure> treasure = new List<Treasure> { World.treasures.FirstOrDefault(t => t.IdNumber == treasures) };
+                    List<string> quest = new List<string>();
+
+                    Player player = new Player(idNumber, name, password, race, playerClass, hp, ac, location, item, potion, weapon, treasure, quest);
+                    World.players.Add(player);
                 }
             }
         }
