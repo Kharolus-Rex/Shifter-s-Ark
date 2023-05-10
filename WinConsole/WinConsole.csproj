@@ -51,6 +51,7 @@
     <None Include="Files\CSVFiles\items.csv" />
     <None Include="Files\CSVFiles\mobs.csv" />
     <None Include="Files\CSVFiles\potions.csv" />
+    <None Include="Files\CSVFiles\rooms.csv" />
     <None Include="Files\CSVFiles\treasures.csv" />
     <None Include="Files\CSVFiles\weapons.csv" />
   </ItemGroup>
@@ -59,12 +60,6 @@
       <Project>{0b46f03f-9391-4170-a4ac-ba3baacf9fdc}</Project>
       <Name>WorldEngine</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Files\CSVFiles\RoomsAndLocations\RoomDescs.txt" />
-    <Content Include="Files\CSVFiles\RoomsAndLocations\Rooms.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

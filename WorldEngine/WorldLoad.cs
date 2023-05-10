@@ -127,9 +127,11 @@ namespace WorldEngine
                     string CLass = row[4];
                     int HP = int.Parse(row[5]);
                     int AC = int.Parse(row[6]);
-                    int wep = int.Parse(row[7]);
+                    int weaponID = int.Parse(row[7]);
 
-                    Mob mob = new Mob(id, name, description, race, CLass, HP, AC, wep);
+                    Weapon weapon = World.weapons.FirstOrDefault(w => w.IdNumber == weaponID);
+
+                    Mob mob = new Mob(id, name, description, race, CLass, HP, AC, weapon);
                     World.mobs.Add(mob);
                 }
             }
