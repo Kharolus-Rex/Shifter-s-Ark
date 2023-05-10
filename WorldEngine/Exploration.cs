@@ -12,7 +12,7 @@ namespace WorldEngine
         public static void ExploreStart()
         {
             Console.WriteLine($"You begin your journey in the {World.rooms[World.RoomTracker]}. {World.rooms[World.RoomTracker].Description}. What would you like to do?");
-            Console.WriteLine("Please enter a command. Possible options: north, south, inventory, weapons, potions, mobs, treasure.\nType exit to leave the realm.\n");
+            Console.WriteLine("Please enter a command. Possible options: north, south, east, west, inventory, weapons, potions, mobs, treasure.\nType exit to leave the realm.\n");
         }
 
         //Contains the switch statement to decide if the user is able to move or not.

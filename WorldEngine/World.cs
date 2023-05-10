@@ -28,6 +28,8 @@ namespace WorldEngine
 
         //mobs lists
         public static List<Mob> mobs = new List<Mob>();
+        //attribute weapon is stored as an int, the same int that will match a weaponID. cross reference with a search algorithm later.
+        //TODO - SEARCH ALGORITHM FOR MOBS WEAPON
 
         //current room tracker, as this will likely be used in multiple places at once. it should be outside other methods and classes
         public static int RoomTracker = 0; //initialized as 0 as that is the starting index for this list.

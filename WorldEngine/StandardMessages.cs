@@ -9,7 +9,7 @@ namespace WorldEngine
     public class StandardMessages
     {
         //NormalState is basic travel.
-        public static void NormalState()
+        public static void NormalState() //TODO - REDO NORMSTATE to be up to date with requirements. such as players CURRENT inventory.
         {
             string action;
             action = Console.ReadLine().ToLower();

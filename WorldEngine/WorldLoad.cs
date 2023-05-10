@@ -9,14 +9,9 @@ namespace WorldEngine
 {
     public class WorldLoad
     {
-        private static StreamReader inputFile;
-        private static int i;
-
         public static void LoadItems()
         {
-            inputFile = File.OpenText(@"CSVFiles\items.csv");
-
-            using (var reader = new StreamReader("items.csv"))
+            using (var reader = new StreamReader("./CSVFiles/items.csv"))
             {
                 //skip the first line
                 reader.ReadLine();
@@ -37,143 +32,107 @@ namespace WorldEngine
                     World.items.Add(item);
                 }
             }
-            
-
-            //while (!inputFile.EndOfStream)
-            //{
-            //    World.items[i] = inputFile.ReadLine();
-            //    i++;
-            //}
-
-            //i = 0; //reset running i var
-
-            //inputFile.Close();
-
-            //inputFile = File.OpenText(@"TextFiles\ItemsPotsTreasureWeapons\ItemDescs.txt");
-
-            //while (!inputFile.EndOfStream)
-            //{
-            //    World.itemDescs[i] = inputFile.ReadLine();
-            //    i++;
-            //}
-            //inputFile.Close();
-
         }
 
-        //public static void LoadPotions()
-        //{
-        //    i = 0;
-        //    inputFile = File.OpenText(@"TextFiles\ItemsPotsTreasureWeapons\Potions.txt");
+        public static void LoadPotions()
+        {
+            using (var reader = new StreamReader("./CSVFiles/potions.csv"))
+            {
+                //skip first line
+                reader.ReadLine();
 
-        //    while (!inputFile.EndOfStream)
-        //    {
-        //        World.potions[i] = inputFile.ReadLine();
-        //        i++;
-        //    }
-        //    inputFile.Close();
-        //    i = 0;
+                while (!reader.EndOfStream)
+                {
+                    var row = reader.ReadLine().Split(',');
 
-        //    inputFile = File.OpenText(@"TextFiles\ItemsPotsTreasureWeapons\PotionDescs.txt");
+                    int id = int.Parse(row[0]);
+                    string name = row[1];
+                    string description = row[2];
+                    int price = int.Parse(row[3]);
+                    int valChange = int.Parse(row[4]);
 
-        //    while (!inputFile.EndOfStream)
-        //    {
-        //        World.potionDescs[i] = inputFile.ReadLine();
-        //        i++;
-        //    }
-        //    inputFile.Close();
-        //}
+                    Potion potion = new Potion(id, name, description, price, valChange);
+                    World.potions.Add(potion);
+                }
+            }
+        }
 
-        //public static void LoadTreasures()
-        //{
-        //    i = 0;
-        //    inputFile = File.OpenText(@"TextFiles\ItemsPotsTreasureWeapons\Treasures.txt");
+        public static void LoadTreasures()
+        {
+            using (var reader = new StreamReader("./CSVFiles/treasures.csv"))
+            {
+                //skip first line
+                reader.ReadLine();
 
-        //    while (!inputFile.EndOfStream)
-        //    {
-        //        World.treasures[i] = inputFile.ReadLine();
-        //        i++;
-        //    }
-        //    inputFile.Close();
-        //    i = 0;
+                while (!reader.EndOfStream)
+                {
+                    var row = reader.ReadLine().Split(',');
 
-        //    inputFile = File.OpenText(@"TextFiles\ItemsPotsTreasureWeapons\TreasureDescs.txt");
+                    int id = int.Parse(row[0]);
+                    string name = row[1];
+                    string description = row[2];
+                    int price = int.Parse(row[3]);
+                    string questItem = row[4];
 
-        //    while (!inputFile.EndOfStream)
-        //    {
-        //        World.treasureDescs[i] = inputFile.ReadLine();
-        //        i++;
-        //    }
-        //    inputFile.Close();
-        //}
+                    Treasure treasure = new Treasure(id, name, description, price, questItem);
+                    World.treasures.Add(treasure);
+                }
+            }
+        }
 
-        //public static void LoadWeapons()
-        //{
-        //    i = 0;
-        //    inputFile = File.OpenText(@"TextFiles\ItemsPotsTreasureWeapons\Weapons.txt");
+        public static void LoadWeapons()
+        {
+            using (var reader = new StreamReader("./CSVFiles/weapons.csv"))
+            {
+                //skip first line
+                reader.ReadLine();
 
-        //    while (!inputFile.EndOfStream)
-        //    {
-        //        World.weapons[i] = inputFile.ReadLine();
-        //        World.weaponDmg[i] = inputFile.ReadLine();
-        //        i++;
-        //    }
-        //    inputFile.Close();
-        //    i = 0;
+                while (!reader.EndOfStream)
+                {
+                    var row = reader.ReadLine().Split(',');
 
-        //    inputFile = File.OpenText(@"TextFiles\ItemsPotsTreasureWeapons\WeaponDescs.txt");
+                    int id = int.Parse(row[0]);
+                    string name = row[1];
+                    string description = row[2];
+                    string damage = row[3];
+                    string damageType = row[4];
+                    int price = int.Parse(row[5]);
 
-        //    while (!inputFile.EndOfStream)
-        //    {
-        //        World.weaponDescs[i] = inputFile.ReadLine();
-        //        i++;
-        //    }
-        //    inputFile.Close();
-        //}
+                    Weapon weapon = new Weapon(id, name, description, damage, damageType, price);
+                    World.weapons.Add(weapon);
+                }
+            }
+        }
 
-        //public static void LoadRooms()
-        //{
-        //    i = 0;
-        //    inputFile = File.OpenText(@"TextFiles\RoomsAndLocations\Rooms.txt");
+        public static void LoadRooms()
+        {
+            //TODO - FILL IN LOADROOM METHOD
+        }
 
-        //    while (!inputFile.EndOfStream)
-        //    {
-        //        World.rooms[i] = inputFile.ReadLine();
-        //        i++;
-        //    }
-        //    inputFile.Close();
-        //    i = 0;
+        public static void LoadMobs()
+        {
+            using (var reader = new StreamReader("./CSVFiles/mobs.csv"))
+            {
+                //skip first line
+                reader.ReadLine();
 
-        //    inputFile = File.OpenText(@"TextFiles\RoomsAndLocations\RoomDescs.txt");
+                while (!reader.EndOfStream)
+                {
+                    var row = reader.ReadLine().Split(',');
 
-        //    while (!inputFile.EndOfStream)
-        //    {
-        //        World.roomDescs[i] = inputFile.ReadLine();
-        //        i++;
-        //    }
-        //    inputFile.Close();
-        //}
+                    int id = int.Parse(row[0]);
+                    string name = row[1];
+                    string description = row[2];
+                    string race = row[3];
+                    string CLass = row[4];
+                    int HP = int.Parse(row[5]);
+                    int AC = int.Parse(row[6]);
+                    int wep = int.Parse(row[7]);
 
-        //public static void LoadMobs()
-        //{
-        //    i = 0;
-        //    inputFile = File.OpenText(@"TextFiles\Mobs\Mobs.txt");
-
-        //    while (!inputFile.EndOfStream)
-        //    {
-        //        World.mobs[i] = inputFile.ReadLine();
-        //        i++;
-        //    }
-        //    inputFile.Close();
-        //    i = 0;
-
-        //    inputFile = File.OpenText(@"TextFiles\Mobs\MobDescs.txt");
-
-        //    while (!inputFile.EndOfStream)
-        //    {
-        //        World.mobDescs[i] = inputFile.ReadLine();
-        //        i++;
-        //    }
-        //    inputFile.Close();
-        //}
+                    Mob mob = new Mob(id, name, description, race, CLass, HP, AC, wep);
+                    World.mobs.Add(mob);
+                }
+            }
+        }
     }
 }
