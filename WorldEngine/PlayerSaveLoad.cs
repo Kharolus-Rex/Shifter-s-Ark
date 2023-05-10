@@ -9,7 +9,6 @@ namespace WorldEngine
 {
     public class PlayerSaveLoad
     {
-        //TODO - COME FINISH LOADPLAYER LATER
         public static Player LoadPlayerData(string playerName)
         {
             string filePath = "./CSVFiles/players.csv";

@@ -9,14 +9,12 @@ namespace WorldEngine
     public class Exploration
     {
         //Contains the switch statement to decide if the user is able to move or not.
-        //TODO - Add east and west options. Also remember that the Room class is gonna be a biiiiiitch to do.
         public static void Movement(string Direction)
         {
             switch (Direction)
             {
                 case "north":
                 case "n":
-                    //TODO - come back and input this stuff after Player class is finished. Fk.
                     if (World.rooms[World.players[0].Location].Exits[0] == -1)
                     {
                         Console.WriteLine("\nA wall is in that direction. You can't break that wall!");

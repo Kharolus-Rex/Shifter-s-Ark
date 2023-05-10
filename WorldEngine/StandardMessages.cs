@@ -39,6 +39,11 @@ namespace WorldEngine
                             case "potions":
                             case "pots":
                                 //TODO - run through inven potions.
+                                //for loop i < player.potions.length;
+                                foreach (Potion potion in World.players[0].Potions)
+                                {
+                                    Console.WriteLine(potion.Name); //TODO - USE AS REFERENCE FOR PRINTING INVENTORY OUT. ALL OF IT IN ONE INVENTORY/INV/INVEN COMMAND
+                                }
                                 break;
                             case "items":
                                 //TODO - run through inven items.

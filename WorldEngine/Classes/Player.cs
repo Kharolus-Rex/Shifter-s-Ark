@@ -15,7 +15,7 @@ namespace WorldEngine
         private string _class;
         private int _HP;
         private int _AC;
-        private int _location; //TODO - room ID. cross reference using search algorithm
+        private int _location;
         private List<Item> _items;
         private List<Potion> _potions;
         private List<Weapon> _weapons;
