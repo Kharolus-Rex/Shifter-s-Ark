@@ -51,42 +51,45 @@ namespace WorldEngine
             return null;
 
         }
-        public static void SavePlayerData(Player player)
-        {
-            string filePath = "./CSVFiles/players.csv";
-            bool playerExists = false;
 
-            List<string> lines = new List<string>();
-            if (File.Exists(filePath))
-            {
-                lines = File.ReadAllLines(filePath).ToList();
-                for (int i = 0; i < lines.Count; i++)
-                {
-                    string[] data = lines[i].Split(',');
+        //TODO - not really a todo. this will all be implemented at a later date.
 
-                    if (data[1] == player.Name)
-                    {
-                        //lines[i] = $"{player stuff}";
-                        playerExists = true;
-                        break;
-                    }
-                }
-            }
+        //public static void SavePlayerData(Player player)
+        //{
+        //    string filePath = "./CSVFiles/players.csv";
+        //    bool playerExists = false;
 
-            if (!playerExists)
-            {
-                string newLine = $"{player.IdNumber}, {player.Name}, {player.Password}, {player.Race}, {player.PlayerClass}, {player.HP}, {player.AC}, {player.Location}, {player.Items}, {player.Potions}, {player.Weapons}, {player.Treasures}, {player.Quests}";
-                lines.Add(newLine);
-            }
+        //    List<string> lines = new List<string>();
+        //    if (File.Exists(filePath))
+        //    {
+        //        lines = File.ReadAllLines(filePath).ToList();
+        //        for (int i = 0; i < lines.Count; i++)
+        //        {
+        //            string[] data = lines[i].Split(',');
 
-            File.WriteAllLines(filePath, lines);
-        }
-        public static void PlayerCheck()
-        {
-            Console.WriteLine("Please enter your name: ");
-            string playerName = Console.ReadLine();
+        //            if (data[1] == player.Name)
+        //            {
+        //                //lines[i] = $"{player stuff}";
+        //                playerExists = true;
+        //                break;
+        //            }
+        //        }
+        //    }
 
-            Player player = LoadPlayerData(playerName);
-        }
+        //    if (!playerExists)
+        //    {
+        //        string newLine = $"{player.IdNumber}, {player.Name}, {player.Password}, {player.Race}, {player.PlayerClass}, {player.HP}, {player.AC}, {player.Location}, {player.Items}, {player.Potions}, {player.Weapons}, {player.Treasures}, {player.Quests}";
+        //        lines.Add(newLine);
+        //    }
+
+        //    File.WriteAllLines(filePath, lines);
+        //}
+        //public static void PlayerCheck()
+        //{
+        //    Console.WriteLine("Please enter your name: ");
+        //    string playerName = Console.ReadLine();
+
+        //    Player player = LoadPlayerData(playerName);
+        //}
     }
 }

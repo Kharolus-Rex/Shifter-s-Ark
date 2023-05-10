@@ -122,11 +122,6 @@ namespace WorldEngine
                     string name = data[1];
                     string description = data[2];
                     List<int> Exits = new List<int> { int.Parse(data[3]), int.Parse(data[4]), int.Parse(data[5]), int.Parse(data[6]) };
-                    //List<Potion> potion = data[7] != "" ? new List<Potion> { World.potions.FirstOrDefault(p => p.IdNumber == potions) } : new List<Potion>();
-                    //List<Weapon> weapon = data[8] != "" ? new List<Weapon> { World.weapons[int.Parse(data[8])] } : new List<Weapon>();
-                    //List<Mob> mob = data[9] != "" ? new List<Mob> { World.mobs[int.Parse(data[9])] } : new List<Mob>();
-                    //List<Treasure> treasures = data[10] != "" ? new List<Treasure> { World.treasures[int.Parse(data[10])] } : new List<Treasure>();
-                    //List<Item> items = data[11] != "" ? new List<Item> { World.items[int.Parse(data[11])] } : new List<Item>();
                     int potions = data[7] != "" ? potions = int.Parse(data[7]) : potions = 0;
                     int weapons = data[8] != "" ? weapons = int.Parse(data[8]) : weapons = 0;
                     int mobs = data[9] != "" ? mobs = int.Parse(data[9]) : mobs = 0;
@@ -209,6 +204,7 @@ namespace WorldEngine
 
                     Player player = new Player(idNumber, name, password, race, playerClass, hp, ac, location, item, potion, weapon, treasure, quest);
                     World.players.Add(player);
+                    //TODO - MAKE A PLAYER CSV
                 }
             }
         }

@@ -9,7 +9,7 @@ namespace WorldEngine
     public class StandardMessages
     {
         //NormalState is basic travel.
-        public static void CheckAction()
+        public static void GameplayLoop()
         {
             string action;
             action = Console.ReadLine().ToLower();
@@ -60,13 +60,17 @@ namespace WorldEngine
                         SimpleCombat.OOCHealingPotion();
                         break;
 
+                    case "look":
+                        LookState(World.CurrentRoom);
+                        break;
+
                     default:
                         Console.WriteLine("\nYour body refuses to follow that action through.");
                         break;
                 }
 
                 //Console.WriteLine($"\nYou are currently in the {}."); //TODO - COME FIX THIS LATER
-                Console.WriteLine("Please enter a command. Possible options: north, south, east, west, inventory, attack, collect, heal.\nType exit to leave the realm.\n");
+                NormalState(World.CurrentRoom, World.players[0]);
 
                 action = Console.ReadLine().ToLower();
 
@@ -79,6 +83,39 @@ namespace WorldEngine
             Console.WriteLine("\nA portal opens beneath you, dropping you into a vast expanse. Enjoy the fall!");
             Console.WriteLine("Press any key to exit.");
             Console.ReadLine();
+            
+        }
+
+        public static void NormalState(Room room, Player player)
+        {
+            Console.WriteLine($"You are currently in {room.Name}");
+            Console.WriteLine($"{room.Description}");
+            Console.WriteLine($"Current HP: {player.HP}");
+            Console.WriteLine("Please enter a command. Possible options: north, south, east, west, inventory, attack, collect, heal, look.\nType exit to leave the realm.\n");
+        }
+
+        public static void LookState(Room room)
+        { 
+            //display mobs
+            Console.WriteLine("Mobs:");
+            foreach (Mob mob in room.Mobs)
+            {
+                Console.WriteLine($" - {mob.Name}");
+            }
+
+            //display items
+            Console.WriteLine("Items:");
+            foreach (Item item in room.Items)
+            {
+                Console.WriteLine($" - {item.Name}");
+            }
+
+            //display weapons
+            Console.WriteLine("Weapons:");
+            foreach (Weapon weapon in room.Weapons)
+            {
+                Console.Write($" - {weapon.Name}");
+            }
         }
     }
 }

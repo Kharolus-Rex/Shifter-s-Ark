@@ -11,7 +11,6 @@ namespace WorldEngine
 
         private static Random random = new Random();
         //This is still only to prove that the combat system works.
-        //TODO - After Classes are made and lists initialized, come back and refit this to function with the new Classes and tokenization of damage.
         //public static void CombatTest()
         //{
         //    //init rand

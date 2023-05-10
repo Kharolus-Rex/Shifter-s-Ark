@@ -29,6 +29,18 @@ namespace WorldEngine
 
         public static List<Player> players = new List<Player>();
 
-        //CURRENT ROOM WILL BE DISPLAYED BY A METHOD.
+        public static Room CurrentRoom = FindRoomByID(World.players[0].Location);
+
+        public static Room FindRoomByID(int roomId)
+        {
+            foreach (Room room in World.rooms)
+            {
+                if (room.IdNumber == roomId)
+                {
+                    return room;
+                }
+            }
+            return null;
+        }
     }
 }
