@@ -1,6 +1,6 @@
 id,name,description,race,class,HP,AC,weaponID
-01,goblin,"a short, green, ugly thing",goblinoid,barbarian,14,15,05
-02,orc,"a tall, green, ugly brute",orc,barbarian,34,13,01
-03,goliath,"decent looking, very tall, sculpted and will break your bones",goliath,barbarian,56,13,01
-04,goblin?,"it looks like a goblin, sounds like a goblin. Is it a goblin?",unknown,barbarian,94,17,02
+01,goblin,"a short green ugly thing",goblinoid,barbarian,14,15,05
+02,orc,"a tall green ugly brute",orc,barbarian,34,13,01
+03,goliath,"decent looking very tall sculpted and will break your bones",goliath,barbarian,56,13,01
+04,goblin?,"it looks like a goblin. sounds like a goblin. Is it a goblin?",unknown,barbarian,94,17,02
 05,Barghest,Don't run or you'll die tired,Fiend,fighter,94,17,03

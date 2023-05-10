@@ -14,7 +14,7 @@ namespace WorldEngine
         private int _north;
         private int _south;
         private int _east;
-        private int _west;//TODO - Come back and redo this as directions, North, South, East, West. Different attributes. If no exit lies in that direction, set to -1.
+        private int _west;
         private List<Potion> _potions;
         private List<Weapon> _weapons;
         private List<Mob> _mobs;

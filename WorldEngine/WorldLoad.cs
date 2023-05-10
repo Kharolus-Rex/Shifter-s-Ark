@@ -107,6 +107,38 @@ namespace WorldEngine
         public static void LoadRooms()
         {
             //TODO - FILL IN LOADROOM METHOD
+            using (var reader = new StreamReader("./CSVFiles/rooms.csv"))
+            {
+                //skip the first line
+                reader.ReadLine();
+
+                while (!reader.EndOfStream)
+                {
+                    var row = reader.ReadLine().Split(',');
+
+                    int id = int.Parse(row[0]);
+                    string name = row[1];
+                    string description = row[2];
+                    int north = int.Parse(row[3]);
+                    int south = int.Parse(row[4]);
+                    int east = int.Parse(row[5]);
+                    int west = int.Parse(row[6]);
+                    int potions = int.Parse(row[7]);
+                    int weapons = int.Parse(row[8]);
+                    int mobs = int.Parse(row[9]);
+                    int treasures = int.Parse(row[10]);
+                    int items = int.Parse(row[11]);
+
+                    List<Potion> potion = new List<Potion> { World.potions.FirstOrDefault(p => p.IdNumber == potions) };
+                    List<Weapon> weapon = new List<Weapon> { World.weapons.FirstOrDefault(w => w.IdNumber == weapons) };
+                    List<Mob> mob = new List<Mob> { World.mobs.FirstOrDefault(m => m.IdNumber == mobs) };
+                    List<Treasure> treasure = new List<Treasure> { World.treasures.FirstOrDefault(t => t.IdNumber == treasures) };
+                    List<Item> item = new List<Item> { World.items.FirstOrDefault(i => i.IdNumber == items) };
+
+                    Room room = new Room(id, name, description, north, south, east, west, potion, weapon, mob, treasure, item);
+                    World.rooms.Add(room);
+                }
+            }
         }
 
         public static void LoadMobs()
