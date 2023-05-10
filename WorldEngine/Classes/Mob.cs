@@ -15,9 +15,9 @@ namespace WorldEngine
         private string _class;
         private int _HP;
         private int _AC;
-        private Weapon _weaponID;
+        private Weapon _mobWeapon;
 
-        public Mob(int idNumber, string name, string description, string race, string Class, int hp, int ac, Weapon weaponID)
+        public Mob(int idNumber, string name, string description, string race, string Class, int hp, int ac, Weapon weapon)
         {
             IdNumber = idNumber;
             Name = name;
@@ -26,7 +26,7 @@ namespace WorldEngine
             CLass = Class;
             HP = hp;
             AC = ac;
-            WeaponID = weaponID;
+            MobWeapon = weapon;
         }
 
         public int IdNumber { get { return _idNumber; } set { _idNumber = value; } }
@@ -36,6 +36,6 @@ namespace WorldEngine
         public string CLass { get { return _class; } set { _class = value; } }
         public int HP { get { return _HP; } set { _HP = value; } }
         public int AC { get { return _AC; } set { _AC = value; } }
-        public Weapon WeaponID { get { return _weaponID; } set { _weaponID = value; } }
+        public Weapon MobWeapon { get { return _mobWeapon; } set { _mobWeapon = value; } }
     }
 }

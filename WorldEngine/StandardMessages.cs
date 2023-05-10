@@ -49,7 +49,7 @@ namespace WorldEngine
                         break;
 
                     case "attack":
-                        SimpleCombat.CombatTest();
+                        SimpleCombat.CombatRevised(World.players[0], World.rooms[World.players[0].Location].Mobs[0]); //calls current player and mob in current room with player.
                         break;
 
                     case "collect":
