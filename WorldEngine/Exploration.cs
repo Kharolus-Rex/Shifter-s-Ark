@@ -68,5 +68,10 @@ namespace WorldEngine
             return;
         }
 
+        public static void CollectThings()
+        {
+            for (int i = 0; i < )
+        }
+
     }
 }

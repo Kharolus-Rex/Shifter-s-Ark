@@ -9,7 +9,7 @@ namespace WorldEngine
     public class StandardMessages
     {
         //NormalState is basic travel.
-        public static void CheckAction() //TODO - REDO NORMSTATE to be up to date with requirements. such as players CURRENT inventory.
+        public static void CheckAction()
         {
             string action;
             action = Console.ReadLine().ToLower();
@@ -30,8 +30,6 @@ namespace WorldEngine
 
                     case "inventory":
                     case "inv":
-                                //TODO - run through inven potions.
-                                //for loop i < player.potions.length;
                         foreach (Potion potion in World.players[0].Potions)
                         {
                             Console.WriteLine(potion.Name);
@@ -50,14 +48,22 @@ namespace WorldEngine
                         }
                         break;
 
-                    default:
+                    case "attack":
+                        SimpleCombat.CombatTest();
+                        break;
 
+                    case "collect":
+                        Exploration.CollectThings();
+                        //TODO - Take items currently in room and add to inventory.
+                        break;
+
+                    default:
                         Console.WriteLine("\nYour body refuses to follow that action through.");
                         break;
                 }
 
                 //Console.WriteLine($"\nYou are currently in the {}."); //TODO - COME FIX THIS LATER
-                Console.WriteLine("Please enter a command. Possible options: north, south, inventory, weapons, potions, mobs, treasure.\nType exit to leave the realm.\n");
+                Console.WriteLine("Please enter a command. Possible options: north, south, east, west, inventory, attack, collect.\nType exit to leave the realm.\n");
 
                 action = Console.ReadLine().ToLower();
 
@@ -71,12 +77,5 @@ namespace WorldEngine
             Console.WriteLine("Press any key to exit.");
             Console.ReadLine();
         }
-
-        //public static void DisplayCurrentRoom()
-        //{
-        //    int location = 
-        //    Room currentRoom = World.rooms.FirstOrDefault()
-        //}
-        //TODO - FINISH CURRENT ROOM STUFF AFTER PLAYER IS DONE COMPLETELY.
     }
 }
