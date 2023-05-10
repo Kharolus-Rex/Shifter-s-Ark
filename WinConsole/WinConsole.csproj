@@ -48,13 +48,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Files\CSVFiles\items.csv" />
-    <None Include="Files\CSVFiles\mobs.csv" />
-    <None Include="Files\CSVFiles\players.csv" />
-    <None Include="Files\CSVFiles\potions.csv" />
-    <None Include="Files\CSVFiles\rooms.csv" />
-    <None Include="Files\CSVFiles\treasures.csv" />
-    <None Include="Files\CSVFiles\weapons.csv" />
+    <None Include="bin\Debug\CSVFiles\items.csv" />
+    <None Include="bin\Debug\CSVFiles\mobs.csv" />
+    <None Include="bin\Debug\CSVFiles\players.csv" />
+    <None Include="bin\Debug\CSVFiles\potions.csv" />
+    <None Include="bin\Debug\CSVFiles\rooms.csv" />
+    <None Include="bin\Debug\CSVFiles\treasures.csv" />
+    <None Include="bin\Debug\CSVFiles\weapons.csv" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WorldEngine\WorldEngine.csproj">
@@ -62,5 +62,6 @@
       <Name>WorldEngine</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
