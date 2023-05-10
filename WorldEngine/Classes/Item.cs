@@ -15,11 +15,13 @@ namespace WorldEngine
         private string _required;
         private string _description;
 
-        public Item(int idNumber, string name, int price, string questItem, string required, string description)
+        public Item(int idNumber, string name, string description, int price, string questItem, string required)
         {
             IdNumber = idNumber;
 
             Name = name;
+
+            Description = description;
 
             Price = price;
 
@@ -27,7 +29,7 @@ namespace WorldEngine
 
             Required = required;
 
-            Description = description;
+            
         }
 
         public int IdNumber { get { return _idNumber; } set { _idNumber = value; } }

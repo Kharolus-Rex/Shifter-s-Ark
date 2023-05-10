@@ -12,35 +12,33 @@ namespace WorldEngine
         private static StreamReader inputFile;
         private static int i;
 
-        public static List<string[]> ReadCSVFile(string fileName)
-        {
-            List<string[]> data = new List<string[]>();
-
-            using (StreamReader reader = new StreamReader(fileName))
-            {
-                string line;
-                while ((line = reader.ReadLine()) != null)
-                {
-                    data.Add(line.Split(','));
-                }
-            }
-
-                return data;
-        }
         public static void LoadItems()
         {
             inputFile = File.OpenText(@"CSVFiles\items.csv");
 
-            i = 0;
-
-            if (i == 0)
+            using (var reader = new StreamReader("items.csv"))
             {
-                inputFile.ReadLine();
-            }
-            while (!inputFile.EndOfStream)
-            {
+                //skip the first line
+                reader.ReadLine();
 
+                while (!reader.EndOfStream)
+                {
+                    var row = reader.ReadLine().Split(',');
+
+                    int id = int.Parse(row[0]);
+                    string name = row[1];
+                    string description = row[2];
+                    int price = int.Parse(row[3]);
+                    string questItem = row[4];
+                    string required = row[5];
+
+                    //create/recreate item dynamically as lines are read
+                    Item item = new Item(id, name, description, price, questItem, required);
+                    World.items.Add(item);
+                }
             }
+            
+
             //while (!inputFile.EndOfStream)
             //{
             //    World.items[i] = inputFile.ReadLine();
@@ -62,120 +60,120 @@ namespace WorldEngine
 
         }
 
-        public static void LoadPotions()
-        {
-            i = 0;
-            inputFile = File.OpenText(@"TextFiles\ItemsPotsTreasureWeapons\Potions.txt");
+        //public static void LoadPotions()
+        //{
+        //    i = 0;
+        //    inputFile = File.OpenText(@"TextFiles\ItemsPotsTreasureWeapons\Potions.txt");
 
-            while (!inputFile.EndOfStream)
-            {
-                World.potions[i] = inputFile.ReadLine();
-                i++;
-            }
-            inputFile.Close();
-            i = 0;
+        //    while (!inputFile.EndOfStream)
+        //    {
+        //        World.potions[i] = inputFile.ReadLine();
+        //        i++;
+        //    }
+        //    inputFile.Close();
+        //    i = 0;
 
-            inputFile = File.OpenText(@"TextFiles\ItemsPotsTreasureWeapons\PotionDescs.txt");
+        //    inputFile = File.OpenText(@"TextFiles\ItemsPotsTreasureWeapons\PotionDescs.txt");
 
-            while (!inputFile.EndOfStream)
-            {
-                World.potionDescs[i] = inputFile.ReadLine();
-                i++;
-            }
-            inputFile.Close();
-        }
+        //    while (!inputFile.EndOfStream)
+        //    {
+        //        World.potionDescs[i] = inputFile.ReadLine();
+        //        i++;
+        //    }
+        //    inputFile.Close();
+        //}
 
-        public static void LoadTreasures()
-        {
-            i = 0;
-            inputFile = File.OpenText(@"TextFiles\ItemsPotsTreasureWeapons\Treasures.txt");
+        //public static void LoadTreasures()
+        //{
+        //    i = 0;
+        //    inputFile = File.OpenText(@"TextFiles\ItemsPotsTreasureWeapons\Treasures.txt");
 
-            while (!inputFile.EndOfStream)
-            {
-                World.treasures[i] = inputFile.ReadLine();
-                i++;
-            }
-            inputFile.Close();
-            i = 0;
+        //    while (!inputFile.EndOfStream)
+        //    {
+        //        World.treasures[i] = inputFile.ReadLine();
+        //        i++;
+        //    }
+        //    inputFile.Close();
+        //    i = 0;
 
-            inputFile = File.OpenText(@"TextFiles\ItemsPotsTreasureWeapons\TreasureDescs.txt");
+        //    inputFile = File.OpenText(@"TextFiles\ItemsPotsTreasureWeapons\TreasureDescs.txt");
 
-            while (!inputFile.EndOfStream)
-            {
-                World.treasureDescs[i] = inputFile.ReadLine();
-                i++;
-            }
-            inputFile.Close();
-        }
+        //    while (!inputFile.EndOfStream)
+        //    {
+        //        World.treasureDescs[i] = inputFile.ReadLine();
+        //        i++;
+        //    }
+        //    inputFile.Close();
+        //}
 
-        public static void LoadWeapons()
-        {
-            i = 0;
-            inputFile = File.OpenText(@"TextFiles\ItemsPotsTreasureWeapons\Weapons.txt");
+        //public static void LoadWeapons()
+        //{
+        //    i = 0;
+        //    inputFile = File.OpenText(@"TextFiles\ItemsPotsTreasureWeapons\Weapons.txt");
 
-            while (!inputFile.EndOfStream)
-            {
-                World.weapons[i] = inputFile.ReadLine();
-                World.weaponDmg[i] = inputFile.ReadLine();
-                i++;
-            }
-            inputFile.Close();
-            i = 0;
+        //    while (!inputFile.EndOfStream)
+        //    {
+        //        World.weapons[i] = inputFile.ReadLine();
+        //        World.weaponDmg[i] = inputFile.ReadLine();
+        //        i++;
+        //    }
+        //    inputFile.Close();
+        //    i = 0;
 
-            inputFile = File.OpenText(@"TextFiles\ItemsPotsTreasureWeapons\WeaponDescs.txt");
+        //    inputFile = File.OpenText(@"TextFiles\ItemsPotsTreasureWeapons\WeaponDescs.txt");
 
-            while (!inputFile.EndOfStream)
-            {
-                World.weaponDescs[i] = inputFile.ReadLine();
-                i++;
-            }
-            inputFile.Close();
-        }
+        //    while (!inputFile.EndOfStream)
+        //    {
+        //        World.weaponDescs[i] = inputFile.ReadLine();
+        //        i++;
+        //    }
+        //    inputFile.Close();
+        //}
 
-        public static void LoadRooms()
-        {
-            i = 0;
-            inputFile = File.OpenText(@"TextFiles\RoomsAndLocations\Rooms.txt");
+        //public static void LoadRooms()
+        //{
+        //    i = 0;
+        //    inputFile = File.OpenText(@"TextFiles\RoomsAndLocations\Rooms.txt");
 
-            while (!inputFile.EndOfStream)
-            {
-                World.rooms[i] = inputFile.ReadLine();
-                i++;
-            }
-            inputFile.Close();
-            i = 0;
+        //    while (!inputFile.EndOfStream)
+        //    {
+        //        World.rooms[i] = inputFile.ReadLine();
+        //        i++;
+        //    }
+        //    inputFile.Close();
+        //    i = 0;
 
-            inputFile = File.OpenText(@"TextFiles\RoomsAndLocations\RoomDescs.txt");
+        //    inputFile = File.OpenText(@"TextFiles\RoomsAndLocations\RoomDescs.txt");
 
-            while (!inputFile.EndOfStream)
-            {
-                World.roomDescs[i] = inputFile.ReadLine();
-                i++;
-            }
-            inputFile.Close();
-        }
+        //    while (!inputFile.EndOfStream)
+        //    {
+        //        World.roomDescs[i] = inputFile.ReadLine();
+        //        i++;
+        //    }
+        //    inputFile.Close();
+        //}
 
-        public static void LoadMobs()
-        {
-            i = 0;
-            inputFile = File.OpenText(@"TextFiles\Mobs\Mobs.txt");
+        //public static void LoadMobs()
+        //{
+        //    i = 0;
+        //    inputFile = File.OpenText(@"TextFiles\Mobs\Mobs.txt");
 
-            while (!inputFile.EndOfStream)
-            {
-                World.mobs[i] = inputFile.ReadLine();
-                i++;
-            }
-            inputFile.Close();
-            i = 0;
+        //    while (!inputFile.EndOfStream)
+        //    {
+        //        World.mobs[i] = inputFile.ReadLine();
+        //        i++;
+        //    }
+        //    inputFile.Close();
+        //    i = 0;
 
-            inputFile = File.OpenText(@"TextFiles\Mobs\MobDescs.txt");
+        //    inputFile = File.OpenText(@"TextFiles\Mobs\MobDescs.txt");
 
-            while (!inputFile.EndOfStream)
-            {
-                World.mobDescs[i] = inputFile.ReadLine();
-                i++;
-            }
-            inputFile.Close();
-        }
+        //    while (!inputFile.EndOfStream)
+        //    {
+        //        World.mobDescs[i] = inputFile.ReadLine();
+        //        i++;
+        //    }
+        //    inputFile.Close();
+        //}
     }
 }

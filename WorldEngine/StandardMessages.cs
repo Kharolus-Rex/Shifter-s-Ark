@@ -29,43 +29,43 @@ namespace WorldEngine
                     case "inv":
 
                         Console.WriteLine("\nIn your inventory you currently have:");
-                        for (int i = 0; i < World.items.Length; i++)
+                        for (int i = 0; i < World.items.Count; i++)
                         {
-                            Console.WriteLine($"{World.items[i]}. {World.itemDescs[i]}");
+                            Console.WriteLine($"{World.items[i]}. {World.items[i].Description}");
                         }
                         break;
 
                     case "weapons":
                         Console.WriteLine("\nIn your inventory you currently have:");
-                        for (int i = 0; i < World.weapons.Length; i++)
+                        for (int i = 0; i < World.weapons.Count; i++)
                         {
-                            Console.WriteLine($"{World.weapons[i]}. {World.weaponDescs[i]} It deals {World.weaponDmg[i]} damage.");
+                            Console.WriteLine($"{World.weapons[i]}. {World.weapons[i].Description} It deals {World.weapons[i].Damage} damage.");
                         }
                         break;
 
                     case "potions":
                     case "pots":
                         Console.WriteLine("\nIn your inventory you currently have:");
-                        for (int i = 0; i < World.potions.Length; i++)
+                        for (int i = 0; i < World.potions.Count; i++)
                         {
-                            Console.WriteLine($"{World.potions[i]}. {World.potionDescs[i]}");
+                            Console.WriteLine($"{World.potions[i]}. {World.potions[i].Description}");
                         }
                         break;
 
                     case "treasure":
                         Console.WriteLine("You have the following treasures:");
-                        for (int i = 0; i < World.treasures.Length; i++)
+                        for (int i = 0; i < World.treasures.Count; i++)
                         {
-                            Console.WriteLine($"{World.treasures[i]}. {World.treasureDescs[i]}");
+                            Console.WriteLine($"{World.treasures[i]}. {World.treasures[i].Description}");
                         }
                         break;
 
                     case "mobs":
 
                         Console.WriteLine("\nThere are various mobs around, such as:");
-                        for (int i = 0; i < World.mobs.Length; i++)
+                        for (int i = 0; i < World.mobs.Count; i++)
                         {
-                            Console.WriteLine($"{World.mobs[i]}. {World.mobDescs[i]}");
+                            Console.WriteLine($"{World.mobs[i]}. {World.mobs[i].Description}");
                         }
                         break;
 

@@ -11,7 +11,7 @@ namespace WorldEngine
         //Initial spawn point for the player's journey.
         public static void ExploreStart()
         {
-            Console.WriteLine($"You begin your journey in the {World.rooms[World.RoomTracker]}. {World.roomDescs[World.RoomTracker]}. What would you like to do?");
+            Console.WriteLine($"You begin your journey in the {World.rooms[World.RoomTracker]}. {World.rooms[World.RoomTracker].Description}. What would you like to do?");
             Console.WriteLine("Please enter a command. Possible options: north, south, inventory, weapons, potions, mobs, treasure.\nType exit to leave the realm.\n");
         }
 
