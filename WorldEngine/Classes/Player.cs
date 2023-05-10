@@ -15,8 +15,8 @@ namespace WorldEngine
         private string _class;
         private int _HP;
         private int _AC;
-        private string _location; //TODO - genuinely unsure if this should be string or room ID
-        //TODO - UPDATE TO ADD INVENTORY, WHICH IS PROBABLY GONNA BE A LIST OF LISTS. FUUUUUUUUUUUUU
+        private string _location; //TODO - room ID. cross reference using search algorithm
+        //TODO - Add multiple lists for different inventory items.
         private List<string> _quests;
 
         public Player(int idNumber, string name, string password, string race, string Class, int hp, int ac, string location, List<string> quests)

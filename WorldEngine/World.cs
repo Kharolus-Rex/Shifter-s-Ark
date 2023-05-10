@@ -8,9 +8,6 @@ namespace WorldEngine
 {
     public static class World
     {
-
-        //TODO - Convert all this into singular lists containing new Classes for each item. room list, weapon list, etc.
-
         //rooms lists
         public static List<Room> rooms = new List<Room>();
 

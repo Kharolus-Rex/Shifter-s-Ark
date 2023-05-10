@@ -106,7 +106,6 @@ namespace WorldEngine
 
         public static void LoadRooms()
         {
-            //TODO - FILL IN LOADROOM METHOD
             using (var reader = new StreamReader("./CSVFiles/rooms.csv"))
             {
                 //skip the first line
