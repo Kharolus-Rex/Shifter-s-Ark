@@ -21,8 +21,6 @@ namespace WorldEngine
         private List<Treasure> _treasures;
         private List<Item> _items;
 
-        //TODO - DO LITERALLY EVERYTHING ELSE FIRST, THEN COME FINISH ROOMS.
-
         public Room(int idNumber, string name, string description, int north, int south, int east, int west, List<Potion> potions, List<Weapon> weapons, List<Mob> mobs, List<Treasure> treasures, List<Item> items)
         {
             IdNumber = idNumber;

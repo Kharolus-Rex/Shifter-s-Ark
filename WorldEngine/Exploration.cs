@@ -28,7 +28,6 @@ namespace WorldEngine
             {
                 case "north":
                 case "n":
-                    //TODO - and IF statement to all of these to check for a -1 nextRoom/direction value to display default message.
                     //TODO - come back and input this stuff after Player class is finished. Fk.
                 case "south":
                 case "s":
