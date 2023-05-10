@@ -70,7 +70,7 @@ namespace WorldEngine
                 }
 
                 //Console.WriteLine($"\nYou are currently in the {}."); //TODO - COME FIX THIS LATER
-                //StandardMessages.NormalState(World.CurrentRoom, World.players[0]);
+                StandardMessages.NormalState(World.players[0]);
 
                 action = Console.ReadLine().ToLower();
 
@@ -86,8 +86,10 @@ namespace WorldEngine
             
         }
 
-        public static void NormalState(Room room, Player player)
+        public static void NormalState(Player player)
         {
+            Room room = World.FindRoomByID(World.players[0].Location);
+            //Console.WriteLine($"You are currently in {room.Name}"); come back for this
             Console.WriteLine($"You are currently in {room.Name}");
             Console.WriteLine($"{room.Description}");
             Console.WriteLine($"Current HP: {player.HP}");
