@@ -11,30 +11,54 @@ namespace WorldEngine
     {
         private static StreamReader inputFile;
         private static int i;
+
+        public static List<string[]> ReadCSVFile(string fileName)
+        {
+            List<string[]> data = new List<string[]>();
+
+            using (StreamReader reader = new StreamReader(fileName))
+            {
+                string line;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    data.Add(line.Split(','));
+                }
+            }
+
+                return data;
+        }
         public static void LoadItems()
         {
-            inputFile = File.OpenText(@"TextFiles\ItemsPotsTreasureWeapons\Items.txt");
+            inputFile = File.OpenText(@"CSVFiles\items.csv");
 
             i = 0;
 
+            if (i == 0)
+            {
+                inputFile.ReadLine();
+            }
             while (!inputFile.EndOfStream)
             {
-                World.items[i] = inputFile.ReadLine();
-                i++;
+
             }
+            //while (!inputFile.EndOfStream)
+            //{
+            //    World.items[i] = inputFile.ReadLine();
+            //    i++;
+            //}
 
-            i = 0; //reset running i var
+            //i = 0; //reset running i var
 
-            inputFile.Close();
+            //inputFile.Close();
 
-            inputFile = File.OpenText(@"TextFiles\ItemsPotsTreasureWeapons\ItemDescs.txt");
+            //inputFile = File.OpenText(@"TextFiles\ItemsPotsTreasureWeapons\ItemDescs.txt");
 
-            while (!inputFile.EndOfStream)
-            {
-                World.itemDescs[i] = inputFile.ReadLine();
-                i++;
-            }
-            inputFile.Close();
+            //while (!inputFile.EndOfStream)
+            //{
+            //    World.itemDescs[i] = inputFile.ReadLine();
+            //    i++;
+            //}
+            //inputFile.Close();
 
         }
 
