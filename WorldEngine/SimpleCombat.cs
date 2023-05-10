@@ -115,6 +115,21 @@ namespace WorldEngine
             return totalDamage;
         }
 
-        public static int
+        public static void OOCHealingPotion()
+        {
+            const int HealingID = 01;
+
+            var healingPotion = World.players[0].Potions.FirstOrDefault(potion => potion.IdNumber == HealingID);
+            if (healingPotion == null)
+            {
+                Console.WriteLine("You don't have any healing potions. Go find some!");
+                return;
+            }
+
+            World.players[0].HP += healingPotion.ValChange;
+            Console.WriteLine($"You used a healing potion. You now have {World.players[0].HP} HP.");
+
+            World.players[0].Potions.Remove(healingPotion);
+        }
     }
 }

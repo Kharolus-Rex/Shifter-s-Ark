@@ -56,13 +56,17 @@ namespace WorldEngine
                         Exploration.CollectThings();
                         break;
 
+                    case "heal":
+                        SimpleCombat.OOCHealingPotion();
+                        break;
+
                     default:
                         Console.WriteLine("\nYour body refuses to follow that action through.");
                         break;
                 }
 
                 //Console.WriteLine($"\nYou are currently in the {}."); //TODO - COME FIX THIS LATER
-                Console.WriteLine("Please enter a command. Possible options: north, south, east, west, inventory, attack, collect.\nType exit to leave the realm.\n");
+                Console.WriteLine("Please enter a command. Possible options: north, south, east, west, inventory, attack, collect, heal.\nType exit to leave the realm.\n");
 
                 action = Console.ReadLine().ToLower();
 
