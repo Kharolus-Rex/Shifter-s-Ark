@@ -28,9 +28,6 @@ namespace WorldEngine
         //attribute weapon is stored as an int, the same int that will match a weaponID. cross reference with a search algorithm later.
 
         public static List<Player> players = new List<Player>();
-
-        //public static Room CurrentRoom = FindRoomByID(World.players[0].Location);
-
         public static Room FindRoomByID(int roomId)
         {
             foreach (Room room in World.rooms)

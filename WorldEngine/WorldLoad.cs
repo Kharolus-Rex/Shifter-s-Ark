@@ -139,7 +139,7 @@ namespace WorldEngine
 
                     Room room = new Room(id, name, description, Exits, potion, weapon, mob, treasure, item);
                     World.rooms.Add(room);
-                }
+                }                
             }
         }
 
