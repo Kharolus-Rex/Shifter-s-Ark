@@ -56,5 +56,14 @@
     <Compile Include="SimpleCombat.cs" />
     <Compile Include="WorldLoad.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="CSVFiles\items.csv" />
+    <None Include="CSVFiles\mobs.csv" />
+    <None Include="CSVFiles\players.csv" />
+    <None Include="CSVFiles\potions.csv" />
+    <None Include="CSVFiles\rooms.csv" />
+    <None Include="CSVFiles\treasures.csv" />
+    <None Include="CSVFiles\weapons.csv" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

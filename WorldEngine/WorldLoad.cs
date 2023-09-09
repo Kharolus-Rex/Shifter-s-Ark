@@ -11,7 +11,7 @@ namespace WorldEngine
     {
         public static void LoadItems()
         {
-            using (var reader = new StreamReader("./CSVFiles/items.csv"))
+            using (var reader = new StreamReader(@"..\..\..\WorldEngine\CSVFiles\items.csv"))
             {
                 //skip the first line
                 reader.ReadLine();
@@ -36,7 +36,7 @@ namespace WorldEngine
 
         public static void LoadPotions()
         {
-            using (var reader = new StreamReader("./CSVFiles/potions.csv"))
+            using (var reader = new StreamReader(@"..\..\..\WorldEngine\CSVFiles\potions.csv"))
             {
                 //skip first line
                 reader.ReadLine();
@@ -59,7 +59,7 @@ namespace WorldEngine
 
         public static void LoadTreasures()
         {
-            using (var reader = new StreamReader("./CSVFiles/treasures.csv"))
+            using (var reader = new StreamReader(@"..\..\..\WorldEngine\CSVFiles\treasures.csv"))
             {
                 //skip first line
                 reader.ReadLine();
@@ -82,7 +82,7 @@ namespace WorldEngine
 
         public static void LoadWeapons()
         {
-            using (var reader = new StreamReader("./CSVFiles/weapons.csv"))
+            using (var reader = new StreamReader(@"..\..\..\WorldEngine\CSVFiles\weapons.csv"))
             {
                 //skip first line
                 reader.ReadLine();
@@ -108,7 +108,7 @@ namespace WorldEngine
         {
             //take two
             //TAKE TWO WORKED AAAAAAAAYYYYYYYYYYYYY
-            using (StreamReader reader = new StreamReader("./CSVFiles/rooms.csv"))
+            using (StreamReader reader = new StreamReader(@"..\..\..\WorldEngine\CSVFiles\rooms.csv"))
             {
                 List<Room> rooms = new List<Room>();
 
@@ -145,7 +145,7 @@ namespace WorldEngine
 
         public static void LoadMobs()
         {
-            using (var reader = new StreamReader("./CSVFiles/mobs.csv"))
+            using (var reader = new StreamReader(@"..\..\..\WorldEngine\CSVFiles\mobs.csv"))
             {
                 //skip first line
                 reader.ReadLine();
@@ -173,7 +173,7 @@ namespace WorldEngine
 
         public static void LoadPlayer()
         {
-            using (var reader = new StreamReader("./CSVFiles/players.csv"))
+            using (var reader = new StreamReader(@"..\..\..\WorldEngine\CSVFiles\players.csv"))
             {
                 //skip first
                 reader.ReadLine();

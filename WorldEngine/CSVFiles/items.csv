@@ -1,0 +1,5 @@
+id,name,description,price,questItem,required
+01,cell key,just a simple cell key. Works on almost every door,5,no,yes
+02,torch,a burny stick,5,no,no
+03,moldy bone,try picking a lock with this!,0,no,no
+04,archaic mark,? ? ?,0,yes,yes
